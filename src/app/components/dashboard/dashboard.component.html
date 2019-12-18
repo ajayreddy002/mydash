@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="dash_block">
+        <div class="row m-0">
+            <div class="col-md-8 col-sm-12">
+                <div class="drop_down">
+                    <mat-form-field>
+                        <mat-label>This Month</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                                {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="card_block">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="card bg_blue">
+                                <span class="card_content">Total Receivables</span>
+                                <span class="sub">₹0.00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="card bg_blue">
+                                <span class="card_content">Total Receivables</span>
+                                <span class="sub">₹0.00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="card bg_blue">
+                                <span class="card_content">Total Receivables</span>
+                                <span class="sub">₹0.00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="card bg_orange">
+                                <span class="card_content">Total Receivables</span>
+                                <span class="sub">₹0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</div>

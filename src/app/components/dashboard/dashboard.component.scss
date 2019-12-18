@@ -1,0 +1,32 @@
+.card {
+  height: 95px;
+  padding: 20px;
+  border-radius: 0px;
+  border: medium none;
+
+  &.bg_blue {
+    background-color: #4A90E2;
+  }
+
+  &.bg_orange {
+    background-color: #ea6d78;
+  }
+
+  .card_content {
+    color: #fff;
+    display: block;
+    padding: 0 0 5px;
+    font-size: 13px;
+  }
+
+  .sub {
+    color: #fff;
+    display: block;
+    font-size: 21px;
+  }
+}
+
+.drop_down {
+  text-align: right;
+  margin-bottom: 15px;
+}
