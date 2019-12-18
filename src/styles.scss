@@ -1,5 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+span,
+p,
+h2,
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  // color: #666666;
+  font-size: 13px;
+}
+
+.tooltip_info {
+  background: #fad052 !important;
+  color: #000000 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.main_header {
+  h2 {
+    clear: both;
+    color: #7a4aaa;
+    // float: left;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 0 0 15px 0;
+    text-transform: capitalize;
+  }
+}
+
+.border-bottom {
+  border-bottom: solid thin #ddd !important;
+  display: block;
+}
+button {
+  outline: none !important;
+  font-family: 'Open Sans', sans-serif !important;
+}

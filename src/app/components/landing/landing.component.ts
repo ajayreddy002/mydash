@@ -13,7 +13,10 @@ export class LandingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.router.navigate(['dashboard'])
+    const url = window.location;
+    if (url.pathname === '') {
+      this.router.navigate(['dashboard']);
+    }
   }
 
 }

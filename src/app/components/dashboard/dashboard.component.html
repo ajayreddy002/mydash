@@ -1,49 +1,115 @@
-<div class="container-fluid">
-    <div class="dash_block">
-        <div class="row m-0">
-            <div class="col-md-8 col-sm-12">
-                <div class="drop_down">
-                    <mat-form-field>
-                        <mat-label>This Month</mat-label>
-                        <mat-select>
-                            <mat-option *ngFor="let food of foods" [value]="food.value">
-                                {{food.viewValue}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <div class="card_block">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="card bg_blue">
-                                <span class="card_content">Total Receivables</span>
-                                <span class="sub">₹0.00</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="card bg_blue">
-                                <span class="card_content">Total Receivables</span>
-                                <span class="sub">₹0.00</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="card bg_blue">
-                                <span class="card_content">Total Receivables</span>
-                                <span class="sub">₹0.00</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="card bg_orange">
-                                <span class="card_content">Total Receivables</span>
-                                <span class="sub">₹0.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-
-            </div>
+<div class="">
+  <div class="dash_block">
+      <div class="main_title">
+        <h2>Logged in user name</h2>
+      </div>
+    <div class="row m-0">
+      <div class="col-md-8 col-sm-12">
+        <div class="drop_down">
+          <div class="date_block">
+            <h2>DEC 01,2019 - DEC 31,2019</h2>
+          </div>
+          <mat-form-field appearance="outline">
+            <!-- <mat-label>This Month</mat-label> -->
+            <mat-select placeholder="This Month">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
         </div>
+        <div class="card_block">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="card bg_blue">
+                <span class="card_content">Total Receivables</span>
+                <span class="sub">₹0.00</span>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card bg_blue">
+                <span class="card_content">Total Receivables</span>
+                <span class="sub">₹0.00</span>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card bg_blue">
+                <span class="card_content">Total Receivables</span>
+                <span class="sub">₹0.00</span>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card bg_orange">
+                <span class="card_content">Total Receivables</span>
+                <span class="sub">₹0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chart_block">
+          <div class="chart_title">
+            <h3>CASHFLOW REPORT</h3>
+            <h3>FY20</h3>
+          </div>
+          <div class="chart">
+            <canvas #cashFlowChart></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ac_block">
+          <div class="card">
+            <div class="img_block">
+              <img src="../../../assets/images/banking.svg" alt="">
+            </div>
+            <div class="ac_title">
+              <h2>Savings Account</h2>
+            </div>
+            <ul class="ac_ul">
+              <li class="active">
+                <span>Applied for current account</span>
+                <p>Application No. 777-000029497</p>
+              </li>
+              <li>
+                <span>Documents verified</span>
+                <p>To open account Documents required</p>
+              </li>
+              <li>
+                <span>Opened the account</span>
+                <p></p>
+              </li>
+              <li>
+                <span>Activated net banking</span>
+                <p></p>
+              </li>
+              <li>
+                <span>Linked the account</span>
+                <p>Yet to link your account? Head here</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="open_pay">
+          <h2>Open Pay
+            <span class="circle" matTooltip="All the money collected via your invoices, quick collects & bulk collects."
+              matTooltipClass="tooltip_info" matTooltipPosition="right">i</span>
+          </h2>
+          <div class="card">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card_header">
+                  <p>Settlement Amount</p>
+                  <span>₹0.00</span>
+                </div>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+            <div class="bt_line"></div>
+            <span class="note">Note: If your customer has paid via Net Banking, Credit Card or Debit Card, it will take upto T+3
+              business days to settle.</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

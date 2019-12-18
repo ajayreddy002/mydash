@@ -25,15 +25,15 @@
 }
 
 .Sidenav-Container {
-  Height: 100%;
+  height: 100%;
 }
 
 .Sidenav-Container {
-  Height: 100%;
-  Position: Fixed;
-  Top: 0;
+  height:  100%;
+  position: Fixed;
+  top: 0;
   left: 0;
-  Right: 0;
+  right: 0;
 }
 
 .sidenav .mat-toolbar {
@@ -167,4 +167,13 @@
 }
 .mat-list-item {
   height: 38px !important;
+}
+::ng-deep .side_content {
+  height: 25px !important;
+}
+::ng-deep .group-menu-selected mat-list-item{
+  color: #ff1493 !important;
+}
+.group-selected {
+  color: #ff1493 ;
 }

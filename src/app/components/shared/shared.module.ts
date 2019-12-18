@@ -10,7 +10,12 @@ import {MatSidenavModule, MatIconModule,
    MatMenuModule,
    MatFormFieldModule,
    MatOptionModule,
-   MatSelectModule} from '@angular/material'
+   MatSelectModule,
+   MatTooltipModule,
+   MatDividerModule,
+   MatTableModule,
+   MatSortModule,
+   MatPaginatorModule} from '@angular/material';
 
 @NgModule({
   declarations: [SidenavComponent],
@@ -25,7 +30,9 @@ import {MatSidenavModule, MatIconModule,
     MatMenuModule,
     MatFormFieldModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTooltipModule,
+    MatDividerModule
   ],
   exports: [
     SidenavComponent,
@@ -38,6 +45,11 @@ import {MatSidenavModule, MatIconModule,
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
+    MatTooltipModule,
+    MatDividerModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ]
 })
 export class SharedModule { }

@@ -23,7 +23,7 @@ export class MenuServiceService {
                 ]
             },
             {
-                group: { code: 'menu2', name: 'Pay' },
+                group: { code: 'pay', name: 'Pay' },
                 menus: [
                     { code: 'send', name: 'Payables' },
                     { code: 'send-bills', name: 'Bills' },

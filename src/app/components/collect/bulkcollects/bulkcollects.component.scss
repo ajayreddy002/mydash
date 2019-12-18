@@ -1,0 +1,63 @@
+.content_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .card {
+    text-align: left;
+    width: 370px;
+    margin: 10px auto;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    /* padding: 30px 25px 30px 20px; */
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+
+    // width: 50%;
+    .icon_block {
+      float: left;
+      width: 30%;
+    }
+
+    .card_content {
+      float: left;
+      width: 70%;
+      padding-left: 10px;
+
+      h2 {
+        font-size: 20px;
+        font-weight: 400;
+        color: #663399;
+        margin: 0 0 10px;
+        padding: 0;
+      }
+
+      p {
+        color: #666;
+        font-size: 13px;
+        margin: 0 0 10px;
+        min-height: 55px;
+        padding: 0;
+      }
+
+      .download_btn {
+        width: 112px;
+        min-width: 120px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 0;
+        color: #ffffff;
+        font-size: 13px;
+        background: #663399;
+        font-family: 'Open-sans', sans-serif;
+        height: 35px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
