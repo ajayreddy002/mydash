@@ -16,6 +16,7 @@ export class SidenavComponent implements OnInit {
     .pipe(
       map(result => result.matches)
     );
+  isUserMenu = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -33,5 +34,7 @@ export class SidenavComponent implements OnInit {
     }
     this.menuGroupSelected = menuGroup.code;
   }
-
+  showUserMenu() {
+    this.isUserMenu = !this.isUserMenu;
+  }
 }

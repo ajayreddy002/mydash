@@ -29,7 +29,7 @@
 }
 
 .Sidenav-Container {
-  height:  100%;
+  height: 100%;
   position: Fixed;
   top: 0;
   left: 0;
@@ -77,7 +77,8 @@
   //   color: #ff1493;
   color: #ffffff;
   text-align: left;
-  padding: 8px 8px 8px 10px;;
+  padding: 8px 8px 8px 10px;
+  ;
   display: block;
   font-size: 14px;
   font-weight: bold;
@@ -157,23 +158,65 @@
   background: #f2f3f7;
   padding: 0 40px;
 }
+
 .arrow_icon {
-    position: absolute;
-    left: auto;
-    right: 30px;
+  position: absolute;
+  left: auto;
+  right: 0px;
+  float: right;
 }
+
 .active {
-    color: #ff1493 !important;
+  color: #ff1493 !important;
+}
+.prof_menu {
+  transition: all 0.5s ease-in-out;
 }
 .mat-list-item {
   height: 38px !important;
 }
+
 ::ng-deep .side_content {
   height: 25px !important;
 }
-::ng-deep .group-menu-selected mat-list-item{
+
+::ng-deep .group-menu-selected mat-list-item {
   color: #ff1493 !important;
 }
+
 .group-selected {
-  color: #ff1493 ;
+  color: #ff1493;
+}
+
+.border-dashed {
+  border-bottom: 1px dotted #666;
+}
+.dropdown-container {
+  transition: all 0.5s ease-in-out;
+}
+.small a {
+  font-size: 12px !important;
+  padding: 3px 8px 3px 25px;
+}
+
+.dropdown-btn {
+  padding: 8px 8px 8px 10px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  
+
+  i {
+    float: right;
+    margin-top: 3px;
+    margin-right: 6px;
+  }
 }

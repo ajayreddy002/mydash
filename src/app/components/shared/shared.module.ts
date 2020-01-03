@@ -15,10 +15,14 @@ import {MatSidenavModule, MatIconModule,
    MatDividerModule,
    MatTableModule,
    MatSortModule,
-   MatPaginatorModule} from '@angular/material';
+   MatPaginatorModule,
+   MatCheckboxModule,
+   MatExpansionModule} from '@angular/material';
+import { ContactComponent } from '../contact/contact.component';
+import { AddcontactComponent } from '../contact/addcontact/addcontact.component';
 
 @NgModule({
-  declarations: [SidenavComponent],
+  declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
     CommonModule,
     SharedRoutingModule,
@@ -32,7 +36,9 @@ import {MatSidenavModule, MatIconModule,
     MatOptionModule,
     MatSelectModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule,
+    MatExpansionModule
   ],
   exports: [
     SidenavComponent,
@@ -49,7 +55,11 @@ import {MatSidenavModule, MatIconModule,
     MatDividerModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ContactComponent,
+    AddcontactComponent,
+    MatCheckboxModule,
+    MatExpansionModule,
   ]
 })
 export class SharedModule { }

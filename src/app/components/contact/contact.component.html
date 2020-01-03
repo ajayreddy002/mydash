@@ -1,0 +1,98 @@
+<div class="main_header">
+  <h2>Contacts</h2>
+</div>
+<div class="border-bottom"></div>
+<div class="main_cont">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="true">All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+              aria-selected="false">
+              <span class="sm-circle sm-blue"></span>
+              Customer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+              aria-selected="false">
+              <span class="sm-circle sm-pink"></span>
+              Vendor</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search by name">
+        <button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md1">
+          <button mat-raised-button>Download</button>
+        </div>
+        <div class="col-md-2">
+          <button class="inv_btn" routerLink="../addcontact">Add Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab_content">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="all_table">
+          <table class="table table-hover">
+            <thead class="thead">
+              <tr>
+                <th scope="col">Contact Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Contact Type</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Test</th>
+                <td>mahathepavan.mail@gmail.com</td>
+                <td>7715024775</td>
+                <td><span class="sm-circle sm-blue"></span>
+                  Customer</td>
+                <td class="show_edit">
+                  <button class="menu"></button>
+                  <span class="invoiceListOption new-box-shadow border-radius-13">
+                    <ul class="invoiceListOptionList">
+                      <!---->
+                      <li>
+                        <a title="Edit" href="/contacts/edit/1133070">
+                          <span class="editIcons">
+                            <img alt="icon" src="assets/greyedit-icon.svg">
+                          </span>
+                          <span>Edit Contact</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        Profile
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        contatct
+      </div>
+    </div>
+  </div>
+</div>

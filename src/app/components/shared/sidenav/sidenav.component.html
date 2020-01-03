@@ -27,6 +27,19 @@
           </div>
         </div>
       </div>
+      <div class="border-dashed mt-2"></div>
+      <div class="prof_menu" (click)="showUserMenu()">
+        <button class="dropdown-btn small" [ngClass]="{'active': isUserMenu}">Rameswara Rao
+          <i aria-hidden="true" class="fa fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-container small" *ngIf="isUserMenu">
+          <a href="">Settings</a>
+          <a href="" target="_blank">Help</a>
+          <a href="" target="_blank">Terms &amp; Conditions</a>
+          <div class="border-dashed"></div>
+          <a href="">Logout</a>
+        </div>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -35,6 +48,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <mat-icon>add_circle</mat-icon>
       <span class="title_text"></span>
     </mat-toolbar>
     <router-outlet></router-outlet>
