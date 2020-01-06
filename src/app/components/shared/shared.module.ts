@@ -17,7 +17,8 @@ import {MatSidenavModule, MatIconModule,
    MatSortModule,
    MatPaginatorModule,
    MatCheckboxModule,
-   MatExpansionModule} from '@angular/material';
+   MatExpansionModule,
+   MatDialogModule} from '@angular/material';
 import { ContactComponent } from '../contact/contact.component';
 import { AddcontactComponent } from '../contact/addcontact/addcontact.component';
 
@@ -38,7 +39,8 @@ import { AddcontactComponent } from '../contact/addcontact/addcontact.component'
     MatTooltipModule,
     MatDividerModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   exports: [
     SidenavComponent,
@@ -60,6 +62,7 @@ import { AddcontactComponent } from '../contact/addcontact/addcontact.component'
     AddcontactComponent,
     MatCheckboxModule,
     MatExpansionModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

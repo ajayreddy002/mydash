@@ -1,0 +1,102 @@
+.dialog_block {
+  background: #f7f7f9;
+  border-radius: 0;
+  padding: 0 20px;
+  max-height: 90vh;
+  overflow: auto;
+  border: none;
+
+  .dialog_header {
+    padding: 15px 0;
+
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 18px;
+      color: #7a4aaa;
+      font-weight: lighter;
+      font-size: 30px;
+    }
+  }
+
+  .dialog_content {
+    padding: 0;
+
+    .form_center {
+      max-width: 383px;
+      margin: 0 auto;
+      display: block;
+
+      .form-group {
+        margin: 0px;
+        padding: 0;
+
+        label {
+          color: #767676;
+          font-size: 13px;
+          font-weight: 600;
+          padding-left: 10px;
+          display: inline-block;
+          font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-control {
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          box-shadow: none;
+          height: 38px;
+          outline: medium none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          width: 100%;
+          background: #fff none repeat scroll 0 0;
+          color: #666666 !important;
+          font-size: 13px !important;
+          font-family: 'Open Sans', sans-serif;
+        }
+      }
+
+    }
+
+    .btn_block {
+      .inv_btn {
+        background: #663399 none repeat scroll 0 0;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        border-color: #663399;
+        height: 37px;
+        line-height: 36px;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        width: 200px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+      }
+      .inv_btn[disabled] {
+        color: rgba(255, 255, 255, 0.2);
+        opacity: 1;
+      }
+
+      .cancel {
+        float: right;
+        color: #666666;
+        font-size: 13px;
+        padding: 0;
+        border: 1px solid #e3e3e3;
+        background: #F7F7F9;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        line-height: 38px;
+        height: 38px;
+        box-shadow: none;
+        padding: 0 20px;
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ const routes: Routes = [
       { path: 'dashboard', loadChildren: () => import('../dashboard/dashboard.module').then(mod => mod.DashboardModule) },
       { path: 'collect', loadChildren: () => import('../collect/collect.module').then(mod => mod.CollectModule) },
       { path: 'pay', loadChildren: () => import('../pay/pay.module').then(mod => mod.PayModule) },
+      { path: 'accounting', loadChildren: () => import('../accounting/accounting.module').then(mod => mod.AccountingModule) },
       {path: 'contact', component: ContactComponent},
       {path: 'addcontact', component: AddcontactComponent}
     ]
