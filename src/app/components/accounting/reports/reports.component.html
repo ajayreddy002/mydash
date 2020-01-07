@@ -1,47 +1,180 @@
+<div *ngIf="route.children.length === 0">
 <div class="main_header">
   <h2>Reports</h2>
 </div>
 <div class="border-bottom"></div>
-<div class="reports_block">
+  <div class="reports_block">
     <div class="reports_block mt-4">
-        <div class="rep_title">
-            <h1>Basic Reports</h1>
-            <p>Key reports that give you an overview of your business</p>
+      <div class="rep_title">
+        <h1>Basic Reports</h1>
+        <p>Key reports that give you an overview of your business</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/Cashflow.svg" alt="">
+            <div class="card_title">
+              <h4>Cashflow</h4>
+            </div>
+            <div class="card_desc">
+              <p>An overview of your cash coming in & cash flowing out of your business</p>
+            </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card rep_card">
-                    <img src="../../../../assets/Cashflow.svg" alt="">
-                    <div class="card_title">
-                        <h4>Cashflow</h4>
-                    </div>
-                    <div class="card_desc">
-                        <p>An overview of your cash coming in & cash flowing out of your business</p>
-                    </div>
-                </div>
+        <div class="col-sm-4">
+          <div class="card rep_card" routerLink="./profit-and-loss">
+            <img src="../../../../assets/images/ProfitnLoss.svg" alt="">
+            <div class="card_title">
+              <h4>Profit & Loss</h4>
             </div>
-            <div class="col-sm-4">
-                <div class="card rep_card">
-                    <img src="../../../../assets/Cashflow.svg" alt="">
-                    <div class="card_title">
-                        <h4>Cashflow</h4>
-                    </div>
-                    <div class="card_desc">
-                        <p>An overview of your cash coming in & cash flowing out of your business</p>
-                    </div>
-                </div>
+            <div class="card_desc">
+              <p>Summary of your income and expense</p>
             </div>
-            <div class="col-sm-4">
-                <div class="card rep_card">
-                    <img src="../../../../assets/Cashflow.svg" alt="">
-                    <div class="card_title">
-                        <h4>Cashflow</h4>
-                    </div>
-                    <div class="card_desc">
-                        <p>An overview of your cash coming in & cash flowing out of your business</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/BalanceSheet.svg" alt="">
+            <div class="card_title">
+              <h4>Balance Sheet</h4>
+            </div>
+            <div class="card_desc">
+              <p>An overview of your business asset, liability & equity</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="bottom_border"></div>
+  </div>
+  <!-- Advanced Reports Block -->
+  <div class="reports_block">
+    <div class="reports_block mt-4">
+      <div class="rep_title">
+        <h1>Advanced Reports</h1>
+        <p>Detailed financial transactions over the life of your company</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/GeneralLedger.svg" alt="">
+            <div class="card_title">
+              <h4>General Ledger</h4>
+            </div>
+            <div class="card_desc">
+              <p>Detailed list of all transactions by each account</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/TrialBalance.svg" alt="">
+            <div class="card_title">
+              <h4>Trial Balance</h4>
+            </div>
+            <div class="card_desc">
+              <p>Balance of all your accounts on a specified date</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+        </div>
+      </div>
+    </div>
+    <div class="bottom_border"></div>
+  </div>
+
+  <!-- Recievables and payables Block -->
+  <div class="reports_block">
+    <div class="reports_block mt-4">
+      <div class="rep_title">
+        <h1>Receivables & Payables</h1>
+        <p>An overview of your receivables & payables</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/AgedPayable.svg" alt="">
+            <div class="card_title">
+              <h4>Aged Receivables</h4>
+            </div>
+            <div class="card_desc">
+              <p>An overview of your unpaid and overdue invoices</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/AgedPayable.svg" alt="">
+            <div class="card_title">
+              <h4>Aged Payables</h4>
+            </div>
+            <div class="card_desc">
+              <p>An overview of your unpaid and overdue bills</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <!-- <div class="card rep_card">
+          <img src="../../../../assets/images/BalanceSheet.svg" alt="">
+          <div class="card_title">
+            <h4>Balance Sheet</h4>
+          </div>
+          <div class="card_desc">
+            <p>An overview of your business asset, liability & equity</p>
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="bottom_border"></div>
+  </div>
+
+  <!-- Sales Reports Block -->
+  <div class="reports_block">
+    <div class="reports_block mt-4">
+      <div class="rep_title">
+        <h1>Sales Reports</h1>
+        <p>An overview of your sales</p>
+      </div>
+      <div class="row mb-4">
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/SalesbyCustomer.svg" alt="">
+            <div class="card_title">
+              <h4>Sale by Customer</h4>
+            </div>
+            <div class="card_desc">
+              <p>An overview of your unpaid and overdue invoices</p>
+              <h5>(coming soon)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card rep_card">
+            <img src="../../../../assets/images/SalesbyProduct.svg" alt="">
+            <div class="card_title">
+              <h4>Sale by Product/Service</h4>
+            </div>
+            <div class="card_desc">
+              <p>Breakdown of your sales by product/services</p>
+              <h5>(coming soon)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <!-- <div class="card rep_card">
+          <img src="../../../../assets/images/BalanceSheet.svg" alt="">
+          <div class="card_title">
+            <h4>Balance Sheet</h4>
+          </div>
+          <div class="card_desc">
+            <p>An overview of your business asset, liability & equity</p>
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<router-outlet></router-outlet>
