@@ -58,6 +58,7 @@
   .card_block {
     margin-top: 20px;
     display: flex;
+    padding-bottom: 30px;
     .card {
       padding: 15px 20px;
       background: #fff;
@@ -77,6 +78,9 @@
 
           &.g_color {
             color: #3E9933;
+          }
+          &.r_color {
+            color: #db2023;
           }
         }
       }
