@@ -1,0 +1,47 @@
+<div class="header_block">
+  <app-nav-header></app-nav-header>
+</div>
+<div class="border-bottom"></div>
+<div class="pl_block">
+  <div class="date_block">
+    <div class="row">
+      <div class="col-sm-3 text-left">
+        <label>From</label>
+        <input class="form-control" type="date" value="07-01-2020">
+      </div>
+      <div class="col-sm-3">
+        <label><br></label>
+        <input class="bttn bttn-theme bttn-100" type="button" value="Update">
+      </div>
+    </div>
+  </div>
+  <div class="bottomline"></div>
+  <div class="row ledger_header mt-4">
+    <div class="col-sm-5 col-sm-offset-1 semibold smtext">Accounts</div>
+    <div class="col-sm-3 text-right semibold smtext">Debit</div>
+    <div class="col-sm-3 text-right semibold smtext">Credit</div>
+  </div>
+  <div>
+    <p-table>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Asset</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body">
+        <tr>
+          <td>Accounts receivables</td>
+          <td style="text-align: right;">₹1,800.00</td>
+          <td></td>
+        </tr>
+        <!-- <tr>
+            <td>Cash & Bank</td>
+            <td></td>
+            <td>₹18,802.20</td>
+        </tr> -->
+      </ng-template>
+    </p-table>
+  </div>
+</div>

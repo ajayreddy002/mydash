@@ -1,0 +1,66 @@
+.pl_block {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 60px;
+
+  .date_block {
+    margin: 20px auto;
+    text-align: center;
+
+    .form-control {
+      outline: none;
+      font-size: 13px;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    label {
+      color: #686868;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0;
+      padding: 3px 2px 3px 15px;
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .bttn.bttn-theme {
+      background: #663399 none repeat scroll 0 0;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      border-color: #663399;
+      height: 37px;
+      line-height: 36px;
+      text-align: center;
+      transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -webkit-transition: all .3s ease-in-out;
+      outline: none;
+      border: none;
+      font-family: 'Open Sans', sans-serif;
+      border-radius: 5px;
+    }
+
+    .bttn-100 {
+      width: 100%;
+    }
+  }
+
+  .bottomline {
+    padding-bottom: 5px;
+    border-bottom: dotted thin #ccc;
+    margin-bottom: 5px;
+  }
+
+  .ledger_header {
+    padding: 10px;
+    background: #fff;
+    border-top: solid thin #fafafa;
+    margin: 0;
+
+  }
+}

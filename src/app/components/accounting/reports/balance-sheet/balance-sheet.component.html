@@ -1,0 +1,111 @@
+<div class="header_block">
+  <app-nav-header></app-nav-header>
+</div>
+<div class="border-bottom"></div>
+<div class="pl_block">
+  <div class="date_block">
+    <div class="row">
+      <div class="col-sm-3 text-left">
+        <label>Date</label>
+        <input class="form-control" type="date" value="07-01-2020">
+      </div>
+      <div class="col-sm-3">
+        <label><br></label>
+        <input class="bttn bttn-theme bttn-100" type="button" value="Update">
+      </div>
+    </div>
+  </div>
+  <div class="bottomline"></div>
+  <div class="card_block">
+    <div class="card">
+      <div class="card_title">
+        <h3>Asset</h3>
+        <p class="g_color">₹16,802.20</p>
+      </div>
+    </div>
+    <div class="minus pt-2">&#61;</div>
+    <div class="card">
+      <div class="card_title">
+        <h3>Liability</h3>
+        <p class="r_color">₹0.00</p>
+      </div>
+    </div>
+    <div class="minus pt-2">&#43;</div>
+    <div class="card">
+      <div class="card_title">
+        <h3>Equity</h3>
+        <p class="b_color">₹16,802.20</p>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <!-- <p-chart type="doughnut" [data]="data"></p-chart> -->
+      <div class="chart_block">
+        <canvas id="canvas" width="343px" height="171px"></canvas>
+      </div>
+      <div class="table_block mt-4">
+        <p-table [value]="cars">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Income</th>
+              <th></th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr>
+              <td>{{item.name}}</td>
+              <td style="text-align: right;">{{item.amount}}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <!-- <p-chart type="doughnut" [data]="data"></p-chart> -->
+      <div class="chart_block">
+        <canvas id="canvas2" width="343px" height="171px"></canvas>
+      </div>
+      <div class="table_block mt-4">
+        <p-table [value]="liabilityData">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Liability</th>
+              <th></th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr>
+              <td>{{item.name}}</td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td *ngIf="liabilityData?.length === 0">
+
+              </td>
+              <td></td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <div class="second_table mt-3">
+            <p-table [value]="equityData">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Equity</th>
+                  <th></th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-item>
+                <tr>
+                  <td>{{item?.name}}</td>
+                  <td style="text-align: right;">{{item?.amount}}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

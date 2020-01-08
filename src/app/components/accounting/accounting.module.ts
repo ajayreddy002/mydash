@@ -8,6 +8,9 @@ import { AdddialogComponent } from './transactions/adddialog/adddialog.component
 import { ReportsComponent } from './reports/reports.component';
 import { NavHeaderComponent } from './reports/nav-header/nav-header.component';
 import { ProfitComponent } from './reports/profit/profit.component';
+import { TrialbalanceComponent } from './reports/trialbalance/trialbalance.component';
+import { BalanceSheetComponent } from './reports/balance-sheet/balance-sheet.component';
+import { GeneralComponent } from './reports/general/general.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { ProfitComponent } from './reports/profit/profit.component';
     AdddialogComponent,
     ReportsComponent,
     NavHeaderComponent,
-    ProfitComponent
+    ProfitComponent,
+    TrialbalanceComponent,
+    BalanceSheetComponent,
+    GeneralComponent
   ],
   imports: [
     CommonModule,

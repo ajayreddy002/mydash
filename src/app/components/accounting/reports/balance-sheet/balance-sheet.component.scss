@@ -1,0 +1,122 @@
+.pl_block {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 60px;
+
+  .date_block {
+    margin: 30px auto;
+    text-align: center;
+
+    label {
+      color: #686868;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0;
+      padding: 3px 2px 3px 15px;
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .bttn.bttn-theme {
+      background: #663399 none repeat scroll 0 0;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      border-color: #663399;
+      height: 37px;
+      line-height: 36px;
+      text-align: center;
+      transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -webkit-transition: all .3s ease-in-out;
+      outline: none;
+      border: none;
+      font-family: 'Open Sans', sans-serif;
+      border-radius: 5px;
+    }
+
+    .bttn-100 {
+      width: 100%;
+    }
+  }
+
+  .bottomline {
+    padding-bottom: 5px;
+    border-bottom: dotted thin #ccc;
+    margin-bottom: 5px;
+  }
+
+  .card_block {
+    margin-top: 20px;
+    display: flex;
+    padding-bottom: 30px;
+
+    .card {
+      padding: 15px 20px;
+      background: #fff;
+      border: none;
+      width: 28%;
+
+      .card_title {
+        h3 {
+          font-family: 'Open Sans', sans-serif;
+          color: #666666;
+          font-size: 13px;
+        }
+
+        p {
+          font-size: 20px;
+          font-family: 'Open Sans', sans-serif;
+
+          &.g_color {
+            color: #3E9933;
+          }
+
+          &.r_color {
+            color: #db2023;
+          }
+
+          &.b_color {
+            color: #3498db;
+          }
+        }
+      }
+    }
+
+    .minus {
+      float: left;
+      width: 5%;
+      padding: 0;
+      font-weight: 100;
+      font-size: 48px;
+      text-align: center;
+      padding-top: 25px;
+      margin: 0 1.5%;
+      color: #666666;
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
+
+}
+
+.ui-datatable-thead {
+  background: #d1e1fa none repeat scroll 0 0;
+
+  tr {
+    border: 1px solid #d6d6d6;
+    background: #fff;
+    color: #555;
+  }
+}
+
+body .ui-table .ui-table-thead>tr>th {
+  border: 1px solid #d6d6d6;
+  background: #d1e1fa none repeat scroll 0 0;
+  color: #555;
+}
+
+.ui-table-thead>tr>th {
+  background: #d1e1fa none repeat scroll 0 0 !important;
+  border: none !important;
+}

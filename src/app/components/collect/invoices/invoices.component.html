@@ -10,7 +10,8 @@
         <div class="row m-0">
           <div class="col-md-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search by name" (keyup)="applyFilter($event.target.value)">
+              <input type="text" class="form-control" placeholder="Search by name"
+                (keyup)="applyFilter($event.target.value)">
               <button>
                 <mat-icon>search</mat-icon>
               </button>
@@ -28,28 +29,23 @@
   </div>
   <!-- Table -->
   <div class="table_block">
-    <div class="mat-elevation-z8">
+    <!-- <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
-
-        <!-- ID Column -->
         <ng-container matColumnDef="invoice">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoice # </th>
           <td mat-cell *matCellDef="let row"> {{row.invoice}} </td>
         </ng-container>
 
-        <!-- Progress Column -->
         <ng-container matColumnDef="inv_date">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Inv Date </th>
           <td mat-cell *matCellDef="let row"> {{row.inv_date}} </td>
         </ng-container>
 
-        <!-- Name Column -->
         <ng-container matColumnDef="recipient">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Recipient </th>
           <td mat-cell *matCellDef="let row"> {{row.recipient}} </td>
         </ng-container>
 
-        <!-- Color Column -->
         <ng-container matColumnDef="amount">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
           <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.amount}} </td>
@@ -81,6 +77,43 @@
       </table>
 
       <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-    </div>
+    </div> -->
+    <p-table [value]="invoiceData">
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of cols">
+            {{col.header}}
+          </th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td *ngFor="let col of cols">
+            <a href="" *ngIf="col.field === 'invoice'"> {{item[col.field]}}</a>
+            <span *ngIf="col.field !== 'invoice'">{{item[col.field]}}</span>
+          </td>
+          <td style="text-align: center" class="menu_icon">
+            <span class="ui_span">
+              <button>
+                <span style="display: none;">ui</span>
+              </button>
+              <span class="opt_menu">
+                <ul>
+                  <li>
+                    <a title="Send Reminder">
+                      <span class="editIcons">
+                        <img alt="icon" src="assets/images/mail.svg">
+                      </span>
+                      <span>Send Reminder</span>
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </span>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
   </div>
 </div>

@@ -23,6 +23,7 @@ export class InvoicesComponent implements OnInit {
       due_date: '12/12/2019', status: 'pending', over_due: '10000', out_standing: '15000'
     },
   ];
+  cols: any[];
   displayedColumns: string[] = ['invoice', 'inv_date', 'recipient', 'amount',
     'due_date', 'status', 'over_due', 'out_standing'];
   dataSource: MatTableDataSource<InvoiceData>;
@@ -35,6 +36,16 @@ export class InvoicesComponent implements OnInit {
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.cols = [
+      { field: 'invoice', header: 'Invoice #' },
+      { field: 'inv_date', header: 'Invoice Date' },
+      { field: 'recipient', header: 'Recipient' },
+      { field: 'amount', header: 'Amount' },
+      { field: 'due_date', header: 'Due Date' },
+      { field: 'status', header: 'Status' },
+      { field: 'over_due', header: 'Over Due' },
+      { field: 'out_standing', header: 'Out Standing' },
+    ];
   }
 
   applyFilter(filterValue: string) {

@@ -3,25 +3,28 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import {MatSidenavModule, MatIconModule,
-   MatToolbarModule,
-   MatListModule,
-   MatButtonModule,
-   MatMenuModule,
-   MatFormFieldModule,
-   MatOptionModule,
-   MatSelectModule,
-   MatTooltipModule,
-   MatDividerModule,
-   MatTableModule,
-   MatSortModule,
-   MatPaginatorModule,
-   MatCheckboxModule,
-   MatExpansionModule,
-   MatDialogModule} from '@angular/material';
+import {
+  MatSidenavModule, MatIconModule,
+  MatToolbarModule,
+  MatListModule,
+  MatButtonModule,
+  MatMenuModule,
+  MatFormFieldModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatTooltipModule,
+  MatDividerModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule,
+  MatCheckboxModule,
+  MatExpansionModule,
+  MatDialogModule
+} from '@angular/material';
 import { ContactComponent } from '../contact/contact.component';
 import { AddcontactComponent } from '../contact/addcontact/addcontact.component';
-
+import { ChartModule } from 'primeng/chart';
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -40,7 +43,9 @@ import { AddcontactComponent } from '../contact/addcontact/addcontact.component'
     MatDividerModule,
     MatCheckboxModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    ChartModule,
+    TableModule
   ],
   exports: [
     SidenavComponent,
@@ -62,7 +67,9 @@ import { AddcontactComponent } from '../contact/addcontact/addcontact.component'
     AddcontactComponent,
     MatCheckboxModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    ChartModule,
+    TableModule
   ]
 })
 export class SharedModule { }
