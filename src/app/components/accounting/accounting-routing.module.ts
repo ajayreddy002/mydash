@@ -6,10 +6,12 @@ import { ProfitComponent } from './reports/profit/profit.component';
 import { BalanceSheetComponent } from './reports/balance-sheet/balance-sheet.component';
 import { GeneralComponent } from './reports/general/general.component';
 import { TrialbalanceComponent } from './reports/trialbalance/trialbalance.component';
+import { ChartOfAcComponent } from './chart-of-ac/chart-of-ac.component';
 
 
 const routes: Routes = [
   { path: 'transactions', component: TransactionsComponent },
+  { path: 'chart-of-accounts', component: ChartOfAcComponent },
   {
     path: 'reports', component: ReportsComponent, children: [
       {path: 'profit-and-loss', component: ProfitComponent},

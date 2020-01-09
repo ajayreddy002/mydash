@@ -11,6 +11,7 @@ import { ProfitComponent } from './reports/profit/profit.component';
 import { TrialbalanceComponent } from './reports/trialbalance/trialbalance.component';
 import { BalanceSheetComponent } from './reports/balance-sheet/balance-sheet.component';
 import { GeneralComponent } from './reports/general/general.component';
+import { ChartOfAcComponent } from './chart-of-ac/chart-of-ac.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { GeneralComponent } from './reports/general/general.component';
     ProfitComponent,
     TrialbalanceComponent,
     BalanceSheetComponent,
-    GeneralComponent
+    GeneralComponent,
+    ChartOfAcComponent
   ],
   imports: [
     CommonModule,

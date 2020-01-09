@@ -16,13 +16,14 @@
     </div>
   </div>
   <div class="bottomline"></div>
-  <div class="row ledger_header mt-4">
-    <div class="col-sm-5 col-sm-offset-1 semibold smtext">Accounts</div>
+  <div class="row ledger_header mt-4 total_block">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5 semibold smtext">Accounts</div>
     <div class="col-sm-3 text-right semibold smtext">Debit</div>
     <div class="col-sm-3 text-right semibold smtext">Credit</div>
   </div>
   <div>
-    <p-table>
+    <p-table [value]="assetData">
       <ng-template pTemplate="header">
         <tr>
           <th>Asset</th>
@@ -30,11 +31,44 @@
           <th></th>
         </tr>
       </ng-template>
-      <ng-template pTemplate="body">
+      <ng-template pTemplate="body" let-asset let-expanded="expanded">
         <tr>
-          <td>Accounts receivables</td>
-          <td style="text-align: right;">₹1,800.00</td>
-          <td></td>
+          <td style="width: 50%;">
+            <span class="ui-column-title right">
+              {{asset?.name}}
+            </span>
+            <ng-container *ngIf="asset?.childData?.length > 0">
+              <span class="expand_icon" (click)="showChildData()">
+                <i [ngClass]="{'fa fa-minus': isChild, 'fas fa-plus': !isChild }"></i>
+              </span>
+              <span *ngIf="isChild">
+                <span *ngFor="let child of asset?.childData">
+                  <div class="tinytext ml-5 mt-2" style="font-size: 12px; width: 250px;">
+                    {{child.name}}
+                  </div>
+                </span>
+              </span>
+            </ng-container>
+          </td>
+          <td style="width: 25%; text-align: right;">{{asset?.debit_amount}}
+            <span *ngIf="isChild">
+              <span *ngFor="let child of asset?.childData">
+                <div class="mt-2">
+                  {{child.debit_amount}}
+                </div>
+              </span>
+            </span>
+          </td>
+          <td style="width: 25%; text-align: right;" class="right">
+            {{asset?.credit_amount}}
+            <span *ngIf="isChild">
+              <span *ngFor="let child of asset?.childData">
+                <div class="mt-2">
+                  {{child.credit_amount}}
+                </div>
+              </span>
+            </span>
+          </td>
         </tr>
         <!-- <tr>
             <td>Cash & Bank</td>
@@ -43,5 +77,135 @@
         </tr> -->
       </ng-template>
     </p-table>
+    <!-- Total Block -->
+    <div class="total_block">
+      <div class="row m-0">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 semibold smtext">Total Asset</div>
+        <div class="col-sm-3 text-right semibold smtext"></div>
+        <div class="col-sm-3 text-right semibold smtext">
+          <span>₹16,802.20</span>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Total Block -->
+  </div>
+  <div class="mt-3">
+    <p-table [value]="assetData">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Expense</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-asset let-expanded="expanded">
+        <tr>
+          <td style="width: 50%;">
+            <span class="ui-column-title right">
+              {{asset?.name}}
+            </span>
+          </td>
+          <td style="width: 25%; text-align: right;">{{asset?.debit_amount}}
+          </td>
+          <td style="width: 25%; text-align: right;" class="right">
+            {{asset?.credit_amount}}
+          </td>
+        </tr>
+        <!-- <tr>
+                <td>Cash & Bank</td>
+                <td></td>
+                <td>₹18,802.20</td>
+            </tr> -->
+      </ng-template>
+    </p-table>
+    <!-- Total Expense Block -->
+    <div class="total_block">
+      <div class="row m-0">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 semibold smtext">Total Expense</div>
+        <div class="col-sm-3 text-right semibold smtext"></div>
+        <div class="col-sm-3 text-right semibold smtext">
+          <span>₹16,802.20</span>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Total Expense Block -->
+  </div>
+  <div class="mt-3">
+    <p-table [value]="assetData">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Income</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-asset let-expanded="expanded">
+        <tr>
+          <td style="width: 50%;">
+            <span class="ui-column-title right">
+              {{asset?.name}}
+            </span>
+            <ng-container *ngIf="asset?.childData?.length > 0">
+              <span class="expand_icon" (click)="showChildData()">
+                <i [ngClass]="{'fa fa-minus': isChild, 'fas fa-plus': !isChild }"></i>
+              </span>
+              <span *ngIf="isChild">
+                <span *ngFor="let child of asset?.childData">
+                  <div class="tinytext ml-5 mt-2" style="font-size: 12px; width: 250px;">
+                    {{child.name}}
+                  </div>
+                </span>
+              </span>
+            </ng-container>
+          </td>
+          <td style="width: 25%; text-align: right;">{{asset?.debit_amount}}
+            <span *ngIf="isChild">
+              <span *ngFor="let child of asset?.childData">
+                <div class="mt-2">
+                  {{child.debit_amount}}
+                </div>
+              </span>
+            </span>
+          </td>
+          <td style="width: 25%; text-align: right;" class="right">
+            {{asset?.credit_amount}}
+            <span *ngIf="isChild">
+              <span *ngFor="let child of asset?.childData">
+                <div class="mt-2">
+                  {{child.credit_amount}}
+                </div>
+              </span>
+            </span>
+          </td>
+        </tr>
+        <!-- <tr>
+            <td>Cash & Bank</td>
+            <td></td>
+            <td>₹18,802.20</td>
+        </tr> -->
+      </ng-template>
+    </p-table>
+    <!-- Total Income Block -->
+    <div class="total_block">
+      <div class="row m-0">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 semibold smtext">Total Income</div>
+        <div class="col-sm-3 text-right semibold smtext"></div>
+        <div class="col-sm-3 text-right semibold smtext">
+          <span>₹16,802.20</span>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Total Income Block -->
+  </div>
+  <div class="total_for mt-3">
+    <div class="row m-0">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5 semibold smtext">Total for all accounts</div>
+      <div class="col-sm-3 semibold smtext text-right">₹55,802.20</div>
+      <div class="col-sm-3 semibold smtext text-right">₹55,802.20</div>
+    </div>
   </div>
 </div>

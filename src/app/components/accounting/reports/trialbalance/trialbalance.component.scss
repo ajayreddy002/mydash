@@ -64,3 +64,35 @@
 
   }
 }
+
+.right {
+  padding: 0 20px !important;
+}
+
+.expand_icon {
+  font-size: 20px;
+  color: #008be0;
+  position: absolute;
+  cursor: pointer;
+  left: 10px;
+  margin-top: -5px;
+}
+
+.total_block, .total_for {
+  padding: 10px;
+  background: #fff;
+  border-top: solid thin #fafafa;
+  margin: 0;
+}
+
+.smtext {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  color: #666666;
+}
+// .total_for{
+//   .smtext{
+//     text-align: right;
+//   }
+// }
