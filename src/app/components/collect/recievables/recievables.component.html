@@ -1,52 +1,120 @@
-<div class="main_block">
-  <div class="main_header">
-    <h2>Collect</h2>
-  </div>
-  <div class="content-block">
-    <div class="card">
+<!-- If Customer Data is Available -->
+<ng-container *ngIf="customerData?.length > 0">
+  <div class="main_block">
+    <div class="main_header">
+      <h2>Receivables</h2>
+    </div>
+    <div class="serach_block">
       <div class="row m-0">
-        <div class="col-md-4 col-sm-12">
-          <div class="card_img">
-            <div class="img_block">
-              <img src="assets/images/invoice.svg" alt="">
+        <div class="col-md-5"></div>
+        <div class="col-md-7">
+          <div class="row m-0">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search by name"
+                  (keyup)="applyFilter($event.target.value)">
+                <button>
+                  <mat-icon>search</mat-icon>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="card_content">
-            <h2>Invoice</h2>
-            <p>Create an invoice on the spot,<br> save, print or e-mail directly to<br> your clients.</p>
-            <button type="button" class="card_btn" routerLink="../invoices">New Invoice</button>
+            <div class="col-md-3">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle inv_btn" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{selectedItem}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <ul>
+                    <li *ngFor="let item of dropDownItems">{{item?.label}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <button class="inv_btn">Download</button>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="card_img">
-            <div class="img_block">
-              <img src="assets/images/quick-collect.svg" alt="">
+      </div>
+    </div>
+    <div class="table_block">
+      <p-table [value]="customerData">
+        <ng-template pTemplate="header">
+          <tr>
+            <th *ngFor="let col of cols" style=" width: 17%;">
+              {{col.header}}
+            </th>
+            <th style=" width: 10%;"></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+          <tr>
+            <td *ngFor="let col of cols" style=" width: 17%;">
+              <a href="" *ngIf="col.field === 'invoice'"> {{item[col.field]}}</a>
+              <span *ngIf="col.field !== 'invoice'">{{item[col.field]}}</span>
+            </td>
+            <td style="text-align: center;"> > </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</ng-container>
+
+
+
+<ng-container *ngIf="customerData?.length === 0">
+  <div class="main_block">
+    <div class="main_header">
+      <h2>Collect</h2>
+    </div>
+    <div class="content-block">
+      <div class="card">
+        <div class="row m-0">
+          <div class="col-md-4 col-sm-12">
+            <div class="card_img">
+              <div class="img_block">
+                <img src="assets/images/invoice.svg" alt="">
+              </div>
+            </div>
+            <div class="card_content">
+              <h2>Invoice</h2>
+              <p>Create an invoice on the spot,<br> save, print or e-mail directly to<br> your clients.</p>
+              <button type="button" class="card_btn" routerLink="../invoices">New Invoice</button>
             </div>
           </div>
-          <div class="card_content">
-            <h2>Quick Collect</h2>
-            <p>
-              Get paid faster and easier by an all-in-one payment<br> link to instantly collect payments through
-              NEFT/<br> RTGS/
-              IMPS/ e-mandate/ Netbanking/ Wallets/ Credit/<br> Debit cards/ UPI
-            </p>
-            <button type="button" class="card_btn">Quick Collect</button>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="card_img">
-            <div class="img_block">
-              <img src="assets/images/bulk.svg" alt="">
+          <div class="col-md-4 col-sm-12">
+            <div class="card_img">
+              <div class="img_block">
+                <img src="assets/images/quick-collect.svg" alt="">
+              </div>
+            </div>
+            <div class="card_content">
+              <h2>Quick Collect</h2>
+              <p>
+                Get paid faster and easier by an all-in-one payment<br> link to instantly collect payments through
+                NEFT/<br> RTGS/
+                IMPS/ e-mandate/ Netbanking/ Wallets/ Credit/<br> Debit cards/ UPI
+              </p>
+              <button type="button" class="card_btn">Quick Collect</button>
             </div>
           </div>
-          <div class="card_content">
-            <h2>Bulk Collect</h2>
-            <p>Send payment requests to a large<br> group of Clients in one go by using the<br> Open Bulk Collect
-              feature.</p>
-            <button type="button" class="card_btn">Bulk Collect</button>
+          <div class="col-md-4 col-sm-12">
+            <div class="card_img">
+              <div class="img_block">
+                <img src="assets/images/bulk.svg" alt="">
+              </div>
+            </div>
+            <div class="card_content">
+              <h2>Bulk Collect</h2>
+              <p>Send payment requests to a large<br> group of Clients in one go by using the<br> Open Bulk Collect
+                feature.</p>
+              <button type="button" class="card_btn">Bulk Collect</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>
