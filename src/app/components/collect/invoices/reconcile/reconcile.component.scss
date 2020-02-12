@@ -1,0 +1,319 @@
+.dialog_main {
+  .dialog_content {
+    background: #f7f7f9;
+    border-radius: 0;
+    padding: 0;
+    max-height: 90vh;
+    overflow: auto;
+    border: none;
+    position: relative;
+
+    .tooltip_info {
+      background: #FAD052;
+      border-left: 4px solid #DFB850;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      max-width: 280px;
+      height: 100%;
+      padding-top: 90px;
+      padding-right: 60px;
+      padding-bottom: 0px;
+      padding-left: 60px;
+
+      .colse_icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+      }
+
+      p {
+        color: #2D2D2D;
+        line-height: 1.5;
+        font-weight: 600;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+      }
+    }
+
+    .dialog_sub {
+      padding: 0 20px;
+      position: relative;
+
+      h2 {
+        color: #7a4aaa;
+        font-weight: lighter;
+        padding: 15px 0 20px;
+        font-size: 30px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+      }
+
+      .tooltip_bulb {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        cursor: pointer;
+      }
+    }
+
+    .grid_block {
+      display: inline-block;
+      width: 100%;
+      border-bottom: 2px solid #e7e7e8;
+      padding: 0 20px;
+
+      ul li {
+        min-height: 75px;
+        float: left;
+        width: 33.3%;
+        padding-bottom: 32px;
+      }
+
+      li {
+        .makInvoicelabel {
+          color: #7A4AAA;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 13px;
+        }
+
+        .markInvoiceValue {
+          display: block;
+          line-height: 16px;
+          font-family: 'Open Sans', sans-serif;
+          color: #666666;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .tabs_block {
+      padding-top: 15px;
+
+      .tabs {
+        padding-bottom: 15px;
+
+        .nav.nav-tabs {
+          background: #f7f7f9 none repeat scroll 0 0;
+          border: none;
+          clear: both;
+          margin: 0 auto;
+          max-width: 285px;
+          border-radius: 5px;
+
+          .nav-item {
+            float: left;
+
+            &:nth-child(1) .nav-link {
+              width: 61px;
+              border-top-left-radius: 10px;
+              border-bottom-left-radius: 10px;
+            }
+
+            &:nth-child(2) .nav-link {
+              width: 113px;
+            }
+
+            &:nth-child(3) .nav-link {
+              width: 114px;
+              border-top-right-radius: 10px;
+              border-bottom-right-radius: 10px;
+            }
+
+            .nav-link {
+              padding: 0;
+              border: 1px solid #ddd;
+              margin-right: -1px;
+              border-radius: 0;
+              color: #666666;
+              font-weight: normal;
+              transition: none;
+              height: 38px;
+              line-height: 38px;
+              text-align: center;
+              font-size: 13px;
+              background-color: #eee;
+
+              .sm-circle {
+                background: #222 none repeat scroll 0 0;
+                border-radius: 50%;
+                display: inline-block;
+                height: 7px;
+                width: 7px;
+
+                &.sm-blue {
+                  background: #4a90e2 none repeat scroll 0 0;
+                }
+
+                &.sm-pink {
+                  background: #EA6D78 none repeat scroll 0 0;
+                }
+              }
+
+              &:hover {
+                text-decoration: none;
+                background-color: #eee;
+              }
+
+              &.active {
+                border: solid thin #ddd;
+                font-weight: bold;
+                background-color: #ffffff;
+
+                .nav-item {
+                  background: #333;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .tab_content {
+        .all_table {
+          .table {
+
+            th,
+            td {
+              font-size: 13px;
+              font-family: 'Open Sans', sans-serif;
+              color: #666666;
+            }
+
+            .thead {
+              background-color: #d1e1fa;
+
+              th {
+                font-size: 13px;
+                font-family: 'Open Sans', sans-serif;
+                color: #666666;
+                font-weight: 600;
+              }
+            }
+
+            tbody {
+              background-color: #ffffff;
+
+              .show_edit {
+                position: relative;
+
+                &:hover {
+                  .invoiceListOption {
+                    visibility: visible;
+                  }
+                }
+              }
+
+              .menu {
+                background: url(/assets/iconMenuTable.png) no-repeat;
+                width: 26px;
+                height: 20px;
+                margin-top: 7px;
+                border: none;
+                float: right;
+              }
+
+              .border-radius-13 {
+                border-radius: 13px !important;
+              }
+
+              .invoiceListOption {
+                height: auto;
+                width: 187px;
+                padding: 0;
+                position: absolute;
+                background: #fff;
+                border-radius: 5px;
+                border: solid 1px #cccccc;
+                right: 10px;
+                top: 30px;
+                z-index: 9;
+                visibility: collapse;
+                text-align: left;
+              }
+
+              .new-box-shadow {
+                box-shadow: 0px 5px 10px rgba(155, 155, 155, 0.5) !important;
+              }
+
+              .invoiceListOptionList {
+                padding: 0 0 0 6px;
+
+                li {
+                  border-top: 1px solid #ddd;
+                  padding: 12px 0;
+                }
+              }
+
+            }
+          }
+
+          .form-control {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: none;
+            height: 38px;
+            outline: medium none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            background: #fff none repeat scroll 0 0;
+            color: #666666 !important;
+            font-size: 13px !important;
+          }
+        }
+
+        .btn_block {
+          text-align: right;
+          padding: 15px 0 35px;
+
+          .cancel {
+            color: #666666;
+            font-size: 13px;
+            padding: 0;
+            border: 1px solid #e3e3e3;
+            background: #F7F7F9;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 38px;
+            height: 38px;
+            box-shadow: none;
+            padding: 0 20px;
+            margin-right: 15px;
+          }
+
+          .inv_btn {
+            background: #663399 none repeat scroll 0 0;
+            color: #fff;
+            font-size: 13px;
+            font-weight: bold;
+            border-color: #663399;
+            height: 37px;
+            line-height: 36px;
+            text-align: center;
+            padding: 0 20px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+::ng-deep .mat-dialog-container {
+  width: 900px !important;
+  background-color: #f7f7f9 !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}

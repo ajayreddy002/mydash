@@ -1,0 +1,133 @@
+<div class="details_block">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="header">
+        <h1>Ro_test</h1>
+      </div>
+      <div class="txt_block">
+        <span>rohith33nemeli@gmail.com </span> &nbsp;&nbsp; | &nbsp;&nbsp; <span>7779883761</span>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="table_block">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>DSO in Days</th>
+              <th>0-30</th>
+              <th>30-60</th>
+              <th>60-90</th>
+              <th>90+</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Outstanding</td>
+              <td>97810</td>
+              <td>97810</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="border-bottom"></div>
+  <div class="content_block">
+    <div class="serach_block">
+      <div class="row m-0">
+        <div class="col-md-6">
+          <div class="sub_header">
+            <h3>Receivables</h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row m-0">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search by name"
+                  (keyup)="applyFilter($event.target.value)">
+                <button>
+                  <mat-icon>search</mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle inv_btn" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  New Request
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <ul>
+                    <li (click)="openCustomerDialog()">Create Invoice </li>
+                    <li (click)="openReconcileDialog()">Quick Collects </li>
+                    <li>Bulk Collects </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table_block">
+      <p-table [value]="receiveData">
+        <ng-template pTemplate="header">
+          <tr>
+            <th *ngFor="let col of cols">
+              {{col.header}}
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+          <tr>
+            <td *ngFor="let col of cols">
+              <a href="" *ngIf="col.field === 'invoice'"> {{item[col.field]}}</a>
+              <span *ngIf="col.field !== 'invoice'">{{item[col.field]}}</span>
+            </td>
+            <td style="text-align: center" class="menu_icon">
+              <span class="ui_span">
+                <button>
+                  <span style="display: none;">ui</span>
+                </button>
+                <span class="opt_menu">
+                  <ul>
+                    <li>
+                      <a title="Send Reminder">
+                        <span class="editIcons">
+                          <img alt="icon" src="assets/images/mail.svg">
+                        </span>
+                        <span>Send Reminder</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="Send Reminder">
+                        <span class="editIcons">
+                          <img alt="icon" src="assets/images/mail.svg">
+                        </span>
+                        <span>Send Reminder</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="Send Reminder">
+                        <span class="editIcons">
+                          <img alt="icon" src="assets/images/mail.svg">
+                        </span>
+                        <span>Send Reminder</span>
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </span>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>

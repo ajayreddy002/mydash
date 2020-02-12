@@ -25,6 +25,8 @@ import { ContactComponent } from '../contact/contact.component';
 import { AddcontactComponent } from '../contact/addcontact/addcontact.component';
 import { ChartModule } from 'primeng/chart';
 import {TableModule} from 'primeng/table';
+import {CheckboxModule} from 'primeng/checkbox';
+
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -45,7 +47,8 @@ import {TableModule} from 'primeng/table';
     MatExpansionModule,
     MatDialogModule,
     ChartModule,
-    TableModule
+    TableModule,
+    CheckboxModule
   ],
   exports: [
     SidenavComponent,
@@ -69,7 +72,8 @@ import {TableModule} from 'primeng/table';
     MatExpansionModule,
     MatDialogModule,
     ChartModule,
-    TableModule
+    TableModule,
+    CheckboxModule
   ]
 })
 export class SharedModule { }

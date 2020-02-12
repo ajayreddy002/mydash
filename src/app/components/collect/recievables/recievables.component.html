@@ -50,7 +50,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-item>
           <tr>
-            <td *ngFor="let col of cols" style=" width: 17%;">
+            <td *ngFor="let col of cols" style=" width: 17%;" routerLink="../details">
               <a href="" *ngIf="col.field === 'invoice'"> {{item[col.field]}}</a>
               <span *ngIf="col.field !== 'invoice'">{{item[col.field]}}</span>
             </td>

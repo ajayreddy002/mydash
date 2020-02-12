@@ -9,12 +9,18 @@ import { QuickcollectComponent } from './quickcollect/quickcollect.component';
 import { BulkcollectsComponent } from './bulkcollects/bulkcollects.component';
 import {DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './recievables/details/details.component';
+import { CustomerdialogComponent } from './invoices/customerdialog/customerdialog.component';
+import { ReconcileComponent } from './invoices/reconcile/reconcile.component';
 @NgModule({
   declarations: [
     InvoicesComponent,
     RecievablesComponent,
     QuickcollectComponent,
     BulkcollectsComponent,
+    DetailsComponent,
+    CustomerdialogComponent,
+    ReconcileComponent
   ],
   imports: [
     DropdownModule,
@@ -22,6 +28,10 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     CollectRoutingModule,
     SharedModule
+  ],
+  entryComponents: [
+    CustomerdialogComponent,
+    ReconcileComponent
   ]
 })
 export class CollectModule { }

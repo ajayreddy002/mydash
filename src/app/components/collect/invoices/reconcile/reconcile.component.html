@@ -1,0 +1,188 @@
+<div class="dialog_main">
+  <div class="dialog_content p-0">
+    <div class="dialog_sub">
+      <h2 class="modal-title">Reconcile</h2>
+      <div class="tooltip_bulb" (click)="openToolTip()">
+        <img src="/assets/images/tooltip.svg" alt="">
+      </div>
+    </div>
+    <div class="grid_block">
+      <ul>
+        <li>
+          <span class="makInvoicelabel">Invoice #</span>
+          <span class="markInvoiceValue">INV003</span>
+        </li>
+        <li>
+          <span class="makInvoicelabel">Invoice Date</span>
+          <span class="markInvoiceValue">2020-01-23</span>
+        </li>
+        <li>
+          <span class="makInvoicelabel">Due Date</span>
+          <span class="markInvoiceValue">2020-01-23</span>
+        </li>
+        <li>
+          <span class="makInvoicelabel">Invoice From</span>
+          <span class="markInvoiceValue"></span>
+        </li>
+        <li>
+          <span class="makInvoicelabel">Ref. ID</span>
+          <span class="markInvoiceValue"></span>
+        </li>
+        <li>
+          <span class="makInvoicelabel">Invoice Amount</span>
+          <span class="markInvoiceValue">
+            <strong>₹100.00</strong>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="tabs_block">
+      <div class="tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="true">Open</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+              aria-selected="false">
+              Connected Bank</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+              aria-selected="false">
+              Cash</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab_content">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="all_table">
+              <table class="table table-hover">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Txn No</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Txn Amount</th>
+                    <th scope="col">Available Balance</th>
+                    <th scope="col">Allocate Amount</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td class="show_edit">
+                      <button class="menu"></button>
+                      <span class="invoiceListOption new-box-shadow border-radius-13">
+                        <ul class="invoiceListOptionList">
+                          <li>
+                            <a title="Edit" href="/contacts/edit/1133070">
+                              <span class="editIcons">
+                                <img alt="icon" src="assets/greyedit-icon.svg">
+                              </span>
+                              <span>Edit Contact</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </span>
+                    </td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn_block">
+              <button type="button" class="cancel">Cancel</button>
+              <button type="button" class="inv_btn">Save Details</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="all_table">
+              <table class="table table-hover">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Txn No</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Txn Amount</th>
+                    <th scope="col">Available Balance</th>
+                    <th scope="col">Allocate Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2019-09-27</td>
+                    <td>86316905</td>
+                    <td>BY TRANSFER/IMPSP2AXXXXXXXX3591 YSSS RAMESWARA RAO(J</td>
+                    <td>₹35,000.00</td>
+                    <td>₹35,000.00</td>
+                    <td>
+                      <input class="form-control" type="text" name="" id="" value="0">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn_block">
+              <button type="button" class="cancel">Cancel</button>
+              <button type="button" class="inv_btn">Save Details</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="all_table">
+              <table class="table table-hover">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="date" class="form-control" name="" id="" value="0">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" name="" id="" value="0">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" name="" id="" value="0">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn_block">
+              <button type="button" class="cancel">Cancel</button>
+              <button type="button" class="inv_btn">Save Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tooltip_info" *ngIf="isToolShow">
+      <span class="colse_icon" (click)="closeToolTip()"> <i class="fas fa-times"></i> </span>
+      <p>
+        <b>Open</b>
+        This will give you a view of all the fund flow that has happened through your open account.
+      </p>
+      <p>
+        <b>Connected Banking</b>
+        This will give you a view of all the fund flow that has happened through your connected account.
+      </p>
+      <p>
+        <b>Cash</b>
+        You can allocate this specific amount in full or partially to the bill, that you have payed to the specific
+        vendor.
+      </p>
+    </div>
+  </div>
+</div>
