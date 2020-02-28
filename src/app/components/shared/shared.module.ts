@@ -26,7 +26,7 @@ import { AddcontactComponent } from '../contact/addcontact/addcontact.component'
 import { ChartModule } from 'primeng/chart';
 import {TableModule} from 'primeng/table';
 import {CheckboxModule} from 'primeng/checkbox';
-
+import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -48,7 +48,8 @@ import {CheckboxModule} from 'primeng/checkbox';
     MatDialogModule,
     ChartModule,
     TableModule,
-    CheckboxModule
+    CheckboxModule,
+    DateRangePickerModule
   ],
   exports: [
     SidenavComponent,
@@ -73,7 +74,8 @@ import {CheckboxModule} from 'primeng/checkbox';
     MatDialogModule,
     ChartModule,
     TableModule,
-    CheckboxModule
+    CheckboxModule,
+    DateRangePickerModule
   ]
 })
 export class SharedModule { }

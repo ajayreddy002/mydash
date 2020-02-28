@@ -1,25 +1,28 @@
 <div class="">
   <div class="dash_block">
-      <div class="main_title">
-        <h2>Logged in user name</h2>
-      </div>
     <div class="row m-0">
-      <div class="col-md-8 col-sm-12">
-        <div class="drop_down">
-          <div class="date_block">
-            <h2>DEC 01,2019 - DEC 31,2019</h2>
+      <div class="col-md-8 col-sm-12 p-0">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="drop_down">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button>
+                  <mat-icon>search</mat-icon>
+                </button>
+              </div>
+            </div>
           </div>
-          <mat-form-field appearance="outline">
-            <!-- <mat-label>This Month</mat-label> -->
-            <mat-select placeholder="This Month">
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+          <div class="col-md-5">
+            <div class="date_block">
+              <div class="form-group">
+                <button type="button" class="form-control">Feb 01, 2020 - Feb29, 2020</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="card_block">
-          <div class="row">
+          <div class="row m-0">
             <div class="col-md-3 col-sm-6">
               <div class="card bg_blue">
                 <span class="card_content">Total Receivables</span>
@@ -49,30 +52,222 @@
         <div class="chart_block">
           <div class="chart_title">
             <h3>CASHFLOW REPORT</h3>
-            <h3>FY20</h3>
+            <!-- <h3>FY20</h3> -->
           </div>
-          <div class="chart">
-            <canvas #cashFlowChart></canvas>
+          <div class="row m-0">
+            <div class="col-md-6 p-2">
+              <div class="chart">
+                <canvas #cashFlowChart></canvas>
+              </div>
+            </div>
+            <div class="col-md-6 p-2">
+              <div class="card">
+                <div class="tabs_block">
+                  <div class="tab_headers">
+                    <ul class="nav nav-tabs align-center" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                          aria-controls="home" aria-selected="true"> Collectables</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                          aria-controls="profile" aria-selected="false">Payment Dues</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="name_block">
+                            <h3>Vamsi Konduri</h3>
+                            <p>ID : 1234567890 </p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="amount_block">
+                            <h3>₹23,471.93</h3>
+                          </div>
+                        </div>
+                        <div class="col-md-4 p-0">
+                          <div class="btn_block">
+                            <button type="button">Send Reminder
+                            </button>
+                            <img src="../../../assets/images/remain.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="name_block">
+                            <h3>Vamsi Konduri</h3>
+                            <p>ID : 1234567890 </p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="amount_block">
+                            <h3>₹23,471.93</h3>
+                          </div>
+                        </div>
+                        <div class="col-md-4 p-0">
+                          <div class="btn_block">
+                            <button type="button">Send Reminder
+                            </button>
+                            <img src="../../../assets/images/remain.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="name_block">
+                            <h3>Vamsi Konduri</h3>
+                            <p>ID : 1234567890 </p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="amount_block">
+                            <h3>₹23,471.93</h3>
+                          </div>
+                        </div>
+                        <div class="col-md-4 p-0">
+                          <div class="btn_block">
+                            <button type="button">Send Reminder
+                            </button>
+                            <img src="../../../assets/images/remain.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="name_block">
+                            <h3>Vamsi Konduri</h3>
+                            <p>ID : 1234567890 </p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="amount_block">
+                            <h3>₹23,471.93</h3>
+                          </div>
+                        </div>
+                        <div class="col-md-4 p-0">
+                          <div class="btn_block">
+                            <button type="button">Send Reminder
+                            </button>
+                            <img src="../../../assets/images/remain.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="name_block">
+                            <h3>Vamsi Konduri</h3>
+                            <p>ID : 1234567890 </p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="amount_block">
+                            <h3>₹23,471.93</h3>
+                          </div>
+                        </div>
+                        <div class="col-md-4 p-0">
+                          <div class="btn_block">
+                            <button type="button">Send Reminder
+                            </button>
+                            <img src="../../../assets/images/remain.svg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                    <div class="viewall_txt">
+                      <p>View all ></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
+        <div class="prof_block">
+          <div class="card profile">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="img_block">
+                  <img src="../../../assets/images/prof.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="prof_content">
+                  <h2>Welcome back, Jeevan!</h2>
+                  <p>Your last login was 02/02/20 05:34:12 PM IST.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card ql_block">
+          <div class="ql_header">
+            <h4>Quick Links</h4>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="ql_content">
+                <h5>collect</h5>
+                <ul>
+                  <li>
+                    <span>Create Invoice</span>
+                  </li>
+                  <li>
+                    <span>Quick Collect</span>
+                  </li>
+                  <li>
+                    <span>Bulk Collect</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="ql_content">
+                <h5>pay</h5>
+                <ul>
+                  <li>
+                    <span>Create Bill</span>
+                  </li>
+                  <li>
+                    <span>Transfer Fund</span>
+                  </li>
+                  <li>
+                    <span>Bulk Transfer</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="ql_content">
+                <h5>CONTACT</h5>
+                <ul>
+                  <li>
+                    <span>Add Contact</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="ac_block">
           <div class="card">
-            <div class="img_block">
+            <!-- <div class="img_block">
               <img src="../../../assets/images/banking.svg" alt="">
+            </div> -->
+            <div class="cac_block">
+              <h2>Current Account</h2>
+              <img src="../../../assets/images/icici_logo.svg" alt="">
             </div>
             <div class="ac_title">
-              <h2>Savings Account</h2>
+              <!-- <h2>Savings Account</h2> -->
             </div>
             <ul class="ac_ul">
               <li class="active">
                 <span>Applied for current account</span>
-                <p>Application No. 777-000029497</p>
+                <p>Application No. <span>777-000029497</span> </p>
               </li>
               <li>
                 <span>Documents verified</span>
-                <p>To open account Documents required</p>
+                <p>To open account<span> Documents required</span></p>
               </li>
               <li>
                 <span>Opened the account</span>
@@ -84,12 +279,12 @@
               </li>
               <li>
                 <span>Linked the account</span>
-                <p>Yet to link your account? Head here</p>
+                <p>Yet to link your account? <span> Head here</span></p>
               </li>
             </ul>
           </div>
         </div>
-        <div class="open_pay">
+        <!-- <div class="open_pay">
           <h2>Open Pay
             <span class="circle" matTooltip="All the money collected via your invoices, quick collects & bulk collects."
               matTooltipClass="tooltip_info" matTooltipPosition="right">i</span>
@@ -105,10 +300,11 @@
               <div class="col-md-6"></div>
             </div>
             <div class="bt_line"></div>
-            <span class="note">Note: If your customer has paid via Net Banking, Credit Card or Debit Card, it will take upto T+3
+            <span class="note">Note: If your customer has paid via Net Banking, Credit Card or Debit Card, it will take
+              upto T+3
               business days to settle.</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedComponent } from './components/shared/shared.component';
-
+import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +14,8 @@ import { SharedComponent } from './components/shared/shared.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DateRangePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
