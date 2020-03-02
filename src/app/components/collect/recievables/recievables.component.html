@@ -4,21 +4,20 @@
     <div class="main_header">
       <h2>Receivables</h2>
     </div>
-    <div class="serach_block">
-      <div class="row m-0">
-        <div class="col-md-5"></div>
-        <div class="col-md-7">
+    <div class="search_block">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search by Customer name..."
+              (keyup)="applyFilter($event.target.value)">
+            <button>
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
           <div class="row m-0">
             <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search by name"
-                  (keyup)="applyFilter($event.target.value)">
-                <button>
-                  <mat-icon>search</mat-icon>
-                </button>
-              </div>
-            </div>
-            <div class="col-md-3">
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle inv_btn" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +30,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
               <button class="inv_btn">Download</button>
             </div>
           </div>
@@ -39,7 +38,7 @@
       </div>
     </div>
     <div class="table_block">
-      <p-table [value]="customerData">
+      <!-- <p-table [value]="customerData">
         <ng-template pTemplate="header">
           <tr>
             <th *ngFor="let col of cols" style=" width: 17%;">
@@ -57,7 +56,155 @@
             <td style="text-align: center;"> > </td>
           </tr>
         </ng-template>
-      </p-table>
+      </p-table> -->
+      <div class="row">
+        <div class="col-md-8">
+          <p-table [columns]="cols" [value]="customerData" dataKey="id">
+            <ng-template pTemplate="header" let-columns>
+              <tr>
+                <th style="width: 3em"></th>
+                <th *ngFor="let col of columns">
+                  {{col.header}}
+                </th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-expanded="expanded" let-columns="columns">
+              <tr>
+                <td>
+                  <a href="#" [pRowToggler]="rowData">
+                    <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+                  </a>
+                </td>
+                <td *ngFor="let col of columns">
+                  {{rowData[col.field]}}
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-rowData let-columns="columns">
+              <tr class="expanded_row">
+                <td [attr.colspan]="columns.length + 1">
+                  <div class="ui-g ui-fluid" style="font-size:16px;padding:20px">
+                    <div class="ui-g-12 ui-md-3" style="text-align:center">
+                      <!-- <img [attr.alt]="rowData.brand" src="assets/showcase/images/demo/car/{{rowData.brand}}.png"> -->
+                    </div>
+                    <div class="ui-g-12 ui-md-9">
+                      <div class="ui-g">
+                        <div class="ui-g-12">
+                          <b>Customer Name:</b> {{rowData.customer_name}}
+                        </div>
+                        <div class="ui-g-12">
+                          <b>Total Receivables:</b> {{rowData.total_receivables}}
+                        </div>
+                        <div class="ui-g-12">
+                          <b>Outstanding:</b> {{rowData.out_standing}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+        <div class="col-md-4 p-0">
+          <div class="totalre_block">
+            <div class="totalr_header">
+              <p>Total Receivables</p>
+              <h3>₹97,810.00</h3>
+            </div>
+            <div class="totalre_sub">
+              <p>Take Immediate action</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="name">
+                    <h3>Vamsi Konduri</h3>
+                    <p class="mt-1">ID : 1234567890</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="name">
+                    <p>Amount Payable</p>
+                    <h4>₹23,471.93</h4>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="name">
+                    <button type="button"> <img src="/assets/images/remain.svg" alt=""> Take Action</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="name">
+                    <h3>Vamsi Konduri</h3>
+                    <p class="mt-1">ID : 1234567890</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="name">
+                    <p>Amount Payable</p>
+                    <h4>₹23,471.93</h4>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="name">
+                    <button type="button"> <img src="/assets/images/remain.svg" alt=""> Take Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ql_block">
+              <div class="ql_header">
+                <h4>Quick Links</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="ql_content">
+                    <h5>collect</h5>
+                    <ul>
+                      <li>
+                        <span>Create Invoice</span>
+                      </li>
+                      <li>
+                        <span>Quick Collect</span>
+                      </li>
+                      <li>
+                        <span>Bulk Collect</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="ql_content">
+                    <h5>pay</h5>
+                    <ul>
+                      <li>
+                        <span>Create Bill</span>
+                      </li>
+                      <li>
+                        <span>Transfer Fund</span>
+                      </li>
+                      <li>
+                        <span>Bulk Transfer</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="ql_content">
+                    <h5>CONTACT</h5>
+                    <ul>
+                      <li>
+                        <span>Add Contact</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </ng-container>

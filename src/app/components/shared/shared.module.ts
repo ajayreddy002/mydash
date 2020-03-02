@@ -27,6 +27,9 @@ import { ChartModule } from 'primeng/chart';
 import {TableModule} from 'primeng/table';
 import {CheckboxModule} from 'primeng/checkbox';
 import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
+import {CalendarModule} from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
+import {NgApexchartsModule} from 'ng-apexcharts';
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -49,7 +52,10 @@ import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
     ChartModule,
     TableModule,
     CheckboxModule,
-    DateRangePickerModule
+    DateRangePickerModule,
+    CalendarModule,
+    FormsModule,
+    NgApexchartsModule
   ],
   exports: [
     SidenavComponent,
@@ -75,7 +81,10 @@ import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
     ChartModule,
     TableModule,
     CheckboxModule,
-    DateRangePickerModule
+    DateRangePickerModule,
+    CalendarModule,
+    FormsModule,
+    NgApexchartsModule
   ]
 })
 export class SharedModule { }

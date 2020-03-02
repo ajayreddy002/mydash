@@ -14,6 +14,7 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 @import '../node_modules/primeng/resources/primeng.min.css';
 @import '../node_modules/primeng/resources/themes/nova-light/theme.css';
+@import '../node_modules/primeicons/primeicons.css';
 
 ul {
   margin: 0px;
@@ -25,7 +26,6 @@ span,
 p,
 h2,
 h3 {
-  font-family: 'Open Sans', sans-serif;
   // color: #666666;
   font-size: 13px;
 }
@@ -39,11 +39,13 @@ h3 {
 .main_header {
   h2 {
     clear: both;
-    color: #7a4aaa;
+    color: #4F4F4F;
     // float: left;
-    font-size: 30px;
-    font-weight: 300;
-    padding: 0 0 15px 0;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
     text-transform: capitalize;
   }
 }
@@ -59,35 +61,55 @@ button {
 }
 
 body .ui-table .ui-table-thead>tr>th {
-  background: #d1e1fa none repeat scroll 0 0;
-  color: #797979;
+  background: transparent;
+  color: #434343;
   padding: 0 0 0 20px;
   height: 48px;
   border: none !important;
   vertical-align: middle;
-  border-bottom: solid 1px #dddddd !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
   font-family: 'Open Sans', sans-serif !important;
+  text-align: center;
 }
 
-.body .ui-table .ui-table-tbody>tr>td {
-  background: #fff;
-  color: #222;
-  border: none !important;
-  font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+body .ui-table .ui-table-tbody>tr {
+  background-color: #ffffff !important;
+  border-radius: 4px;
 }
 
 .ui-table-tbody>tr>td {
-  color: #797979;
+  color: #4F4F4F;
   padding: 0 0 0 20px !important;
   height: 48px;
   border: none !important;
   vertical-align: middle;
-  border-bottom: solid 1px #dddddd !important;
-  font-size: 13px !important;
-  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border-bottom: solid 1px #f2f3f7 !important;
 }
-.ui-table-tbody>tr:last-child>td {
-  border-bottom: none !important;
+
+table tbody tr td {
+  font-family: Roboto !important;
+}
+
+body .ui-inputtext {
+  min-height: 32px;
+  background-color: #000000;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  color: #F2F2F2;
+  padding: 0 10px;
+}
+
+.download_btn {
+  background: #EB5757 !important;
 }

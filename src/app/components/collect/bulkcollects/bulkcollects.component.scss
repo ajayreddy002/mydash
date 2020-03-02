@@ -1,25 +1,22 @@
 .content_block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+  padding-top: 60px;
   .card {
     text-align: left;
     width: 370px;
     margin: 10px auto;
     max-width: 100%;
-    background: #fff;
-    border-radius: 10px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #E4E4E4 100%);
+    border-radius: 9px;
     display: inline-block;
     /* padding: 30px 25px 30px 20px; */
     padding: 30px 20px;
-    border: 1px solid #ddd;
+    border: none;
 
     // width: 50%;
     .icon_block {
       float: left;
       width: 30%;
+      text-align: center;
     }
 
     .card_content {
@@ -28,23 +25,24 @@
       padding-left: 10px;
 
       h2 {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 400;
         color: #663399;
-        margin: 0 0 10px;
         padding: 0;
+        color: #333333;
       }
 
       p {
-        color: #666;
-        font-size: 13px;
-        margin: 0 0 10px;
-        min-height: 55px;
-        padding: 0;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 14px;
+        color: #4F4F4F;
       }
 
       .download_btn {
-        width: 112px;
+        max-width: 112px;
         min-width: 120px;
         outline: none;
         border-radius: 5px;
@@ -57,6 +55,7 @@
         height: 35px;
         font-weight: 600;
         text-transform: capitalize;
+        margin-top: 12px
       }
     }
   }

@@ -16,7 +16,8 @@
           <div class="col-md-5">
             <div class="date_block">
               <div class="form-group">
-                <button type="button" class="form-control">Feb 01, 2020 - Feb29, 2020</button>
+                <p-calendar  [(ngModel)]="rangeDates" selectionMode="range" showButtonBar="true" [readonlyInput]="true" dateFormat="mm/dd/yy"></p-calendar>
+                <!-- <button type="button" class="form-control">Feb 01, 2020 - Feb29, 2020</button> -->
               </div>
             </div>
           </div>
@@ -57,7 +58,8 @@
           <div class="row m-0">
             <div class="col-md-6 p-2">
               <div class="chart">
-                <canvas #cashFlowChart></canvas>
+                <!-- <canvas #cashFlowChart></canvas> -->
+                <apx-chart [series]="series" [chart]="chart" [title]="title"></apx-chart>
               </div>
             </div>
             <div class="col-md-6 p-2">
