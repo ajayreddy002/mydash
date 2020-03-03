@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './recievables/details/details.component';
 import { CustomerdialogComponent } from './invoices/customerdialog/customerdialog.component';
 import { ReconcileComponent } from './invoices/reconcile/reconcile.component';
+import { NewinvoiceComponent } from './invoices/newinvoice/newinvoice.component';
+import { AdditemComponent } from './invoices/additem/additem.component';
 @NgModule({
   declarations: [
     InvoicesComponent,
@@ -20,7 +22,9 @@ import { ReconcileComponent } from './invoices/reconcile/reconcile.component';
     BulkcollectsComponent,
     DetailsComponent,
     CustomerdialogComponent,
-    ReconcileComponent
+    ReconcileComponent,
+    NewinvoiceComponent,
+    AdditemComponent
   ],
   imports: [
     DropdownModule,
@@ -31,7 +35,8 @@ import { ReconcileComponent } from './invoices/reconcile/reconcile.component';
   ],
   entryComponents: [
     CustomerdialogComponent,
-    ReconcileComponent
+    ReconcileComponent,
+    AdditemComponent
   ]
 })
 export class CollectModule { }

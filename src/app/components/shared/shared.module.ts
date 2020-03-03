@@ -19,7 +19,9 @@ import {
   MatPaginatorModule,
   MatCheckboxModule,
   MatExpansionModule,
-  MatDialogModule
+  MatDialogModule,
+  MatAutocompleteModule,
+  MatInputModule
 } from '@angular/material';
 import { ContactComponent } from '../contact/contact.component';
 import { AddcontactComponent } from '../contact/addcontact/addcontact.component';
@@ -28,8 +30,12 @@ import {TableModule} from 'primeng/table';
 import {CheckboxModule} from 'primeng/checkbox';
 import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
 import {CalendarModule} from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgApexchartsModule} from 'ng-apexcharts';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {DropdownModule} from 'primeng/dropdown';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -55,7 +61,13 @@ import {NgApexchartsModule} from 'ng-apexcharts';
     DateRangePickerModule,
     CalendarModule,
     FormsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    RadioButtonModule,
+    DropdownModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     SidenavComponent,
@@ -84,7 +96,13 @@ import {NgApexchartsModule} from 'ng-apexcharts';
     DateRangePickerModule,
     CalendarModule,
     FormsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    RadioButtonModule,
+    DropdownModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

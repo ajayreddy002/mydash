@@ -5,12 +5,14 @@ import { InvoicesComponent } from './invoices/invoices.component';
 import { QuickcollectComponent } from './quickcollect/quickcollect.component';
 import { BulkcollectsComponent } from './bulkcollects/bulkcollects.component';
 import { DetailsComponent } from './recievables/details/details.component';
+import { NewinvoiceComponent } from './invoices/newinvoice/newinvoice.component';
 
 
 const routes: Routes = [
   { path: 'receive', component: RecievablesComponent },
   { path: 'details', component: DetailsComponent },
   { path: 'invoices', component: InvoicesComponent },
+  { path: 'create-invoice', component: NewinvoiceComponent },
   { path: 'quick-collects', component: QuickcollectComponent },
   { path: 'bulk-collects', component: BulkcollectsComponent }
 ];

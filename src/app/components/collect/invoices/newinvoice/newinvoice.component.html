@@ -1,0 +1,312 @@
+<div class="main-block">
+  <div class="white-Box">
+    <div class="invoice-detail">
+      <div class="address-section">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group addNewdrDown">
+              <label>Invoice to</label>
+              <input autocomplete="off" class="form-control" type="text" required="true"
+                placeholder="Enter Customer Name" matInput [formControl]="myControl" [matAutocomplete]="autoCustomer">
+              <mat-autocomplete #autoCustomer="matAutocomplete" [displayWith]="displayFn"
+                (optionSelected)="openAddCustomerDialog($event.option.value)">
+                <mat-option *ngFor="let option of customerNameArr | async" [value]="option.name">
+                  {{option.name}}
+                </mat-option>
+                <mat-option *ngIf="!customerNameArr || !customerNameArr.length" [value]="myControl?.value">
+                  <span class="add_item" (click)="openAddCustomerDialog()">+ Add {{myControl?.value}}</span>
+                </mat-option>
+              </mat-autocomplete>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group" style="position:relative">
+              <label>Income Category
+                <span class="grey-help-circle">i
+                  <span class="tooltipShowcase">Enter a new category to add or choose from the existing
+                    category. All newly added category will come under Income &gt; Sales</span>
+                </span>
+              </label>
+              <input autocomplete="off" class="form-control" type="text" required="true"
+                placeholder="Enter Category Name" matInput [formControl]="categoryControl"
+                [matAutocomplete]="autoCategory">
+              <mat-autocomplete #autoCategory="matAutocomplete" [displayWith]="displayCategoryData">
+                <mat-option *ngFor="let option of categoryArr | async" [value]="option">
+                  {{option.name}}
+                </mat-option>
+                <mat-option (optionSelected)="openAddCustomerDialog($event.option.value)"
+                  *ngIf="!categoryArr || !categoryArr.length" [value]="categoryControl?.value">
+                  <span class="add_item" (click)="openAddCustomerDialog()">+ Add {{categoryControl?.value}}</span>
+                </mat-option>
+              </mat-autocomplete>
+              <!-- <input autocomplete="off" class="form-control" type="text" required="true"
+              placeholder="Enter Category Name"> -->
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="form-group">
+              <label>Invoice Type</label>
+              <ul class="listInvoiceType">
+                <li>
+                  <p-radioButton name="invoiceType" value="1" class="mr-2">
+                    <div class="ui-radiobutton ui-widget">
+                      <div class="ui-helper-hidden-accessible">
+                        <input type="radio" name="invoiceType" value="1">
+                      </div>
+                      <div class="ui-radiobutton-box ui-widget ui-state-default ui-state-active">
+                        <span class="ui-radiobutton-icon ui-clickable fa fa-circle"></span>
+                      </div>
+                    </div>
+                  </p-radioButton>
+                  <span>One Time</span>
+                </li>
+                <li>
+                  <p-radioButton name="invoiceType" value="3" class="mr-2">
+                    <div class="ui-radiobutton ui-widget ">
+                      <div class="ui-helper-hidden-accessible">
+                        <input type="radio" name="invoiceType" value="3">
+                      </div>
+                      <div class="ui-radiobutton-box ui-widget ui-state-default">
+                        <span class="ui-radiobutton-icon ui-clickable"></span>
+                      </div>
+                    </div>
+                  </p-radioButton>
+                  <span>Recurring</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="invoce-refernce">
+        <div class="createInvoiceonetime">
+          <ul>
+            <li class="invoiceOverride">
+              <div class="form-group">
+                <label>
+                  Invoice #
+                  <span class="over">
+                    <label class="override">
+                      <p-checkbox binary="true" name="override" class="ng-valid ng-dirty ng-touched">
+                        <div class="ui-chkbox ui-widget">
+                          <div class="ui-helper-hidden-accessible">
+                            <input type="checkbox" name="override" value="undefined" class="">
+                          </div>
+                          <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                            <span class="ui-chkbox-icon ui-clickable"></span>
+                          </div>
+                        </div>
+                      </p-checkbox>
+                      <span></span> Override
+                    </label>
+                  </span>
+                </label>
+                <span class="">
+                  <input class="form-control" name="sequnecId" required="" type="text" placeholder="INV003">
+                </span>
+              </div>
+            </li>
+            <li class="invoiceDate">
+              <div class="form-group">
+                <label>Invoice Date</label>
+                <p-calendar dateformat="yy-mm-dd" name="invoicedate" placeholder="select date" required=""
+                  yearrange="2000:2030" class="ui-inputwrapper-filled">
+                </p-calendar>
+              </div>
+            </li>
+            <li class="paymentTerm" style="position:relative">
+              <div class="form-group">
+                <label>Payments Terms</label>
+                <p-dropdown [options]="paymentTermsArr" [(ngModel)]="selectedPTerm" editable="true"
+                  placeholder="Due On Receipt">
+                </p-dropdown>
+              </div>
+            </li>
+            <li class="dueDate">
+              <div class="form-group">
+                <label>Select Due Date</label>
+                <p-calendar dateformat="yy-mm-dd" name="duedate" placeholder="Select Due Date" required=""
+                  yearrange="2000:2030" class="ng-tns-c4-10 ng-untouched ng-pristine ng-valid ui-inputwrapper-filled">
+                  <span class="ng-tns-c4-10 ui-calendar">
+                    <input type="text" class=" ui-inputtext ui-widget ui-state-default ui-corner-all" name="duedate"
+                      required="" placeholder="Select Due Date">
+                    <div
+                      class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-shadow ng-trigger ng-trigger-overlayState"
+                      style="display: none; opacity: 0;">
+                    </div>
+                  </span>
+                </p-calendar>
+              </div>
+            </li>
+            <li class="refId">
+              <div class="form-group">
+                <label>
+                  Ref.ID
+                  <em>(optional)</em>
+                </label>
+                <input class="form-control ng-untouched ng-pristine ng-valid" name="refrenceid" placeholder="INV001234"
+                  type="text">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="table-content">
+      <table class="table invoice-table">
+        <thead class="invoice-table-header">
+          <tr align="middle">
+            <th class="width-1">#</th>
+            <th class="width-15">Item Name</th>
+            <th class="width-7">Item Type</th>
+            <th class="width-7">Qty</th>
+            <th class="width-7">Unit</th>
+            <th class="width-7">Rate/unit</th>
+            <th class="width-7">Discount(%)</th>
+            <th class="width-7">Amount
+              <span class="sm-size">Excluding Tax</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="item-tr-border" valign="middle">
+            <td class="serial-num" valign="bottom">
+            </td>
+            <td class="item-name" valign="middle">
+              <div class="link">
+                <div class="form-group pt-3">
+                  <input autocomplete="off" class="form-control" type="text" required="true"
+                    placeholder="Enter Item Name" matInput [formControl]="itemControl" [matAutocomplete]="autoItems">
+                  <mat-autocomplete #autoItems="matAutocomplete" [displayWith]="displayItemsFn">
+                    <mat-option *ngFor="let option of filteredItemsArray | async" [value]="option">
+                      {{option.name}}
+                    </mat-option>
+                    <mat-option *ngIf="!filteredItemsArray || !filteredItemsArray.length"
+                      (click)="openAddItemDialog(itemControl?.value)" [value]="itemControl?.value">
+                      <span class="add_item" (click)="openAddCustomerDialog()">+ Add {{itemControl?.value}}</span>
+                    </mat-option>
+                  </mat-autocomplete>
+                </div>
+              </div>
+            </td>
+            <td class="item-type form-group">
+            </td>
+            <td class="qty form-group">
+            </td>
+            <td class="unit form-group">
+            </td>
+            <td class="rate form-group">
+            </td>
+            <td class="discount form-group">
+            </td>
+            <td class="amount form-group">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="lower-section">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="listCreatInvoiceBotButtons">
+            <li>
+              <div class="attach-file file-input">
+                <label>
+                  <input accept=".xls,.xlsx,.csv,.jpg,.jpeg,.png,.pdf,.txt" multiple="" type="file">
+                  <span>Attach Files</span>
+                  <p class="file-select" data-js-label=""></p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <a class="bttn bttn-default" data-target="#tags-notes" data-toggle="modal">Add
+                Notes</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="invoice-total">
+            <div class="sub-total">
+              <div class="row">
+                <div class="col-md-8">
+                  <span>Sub Total</span>
+                </div>
+                <div class="col-md-4">
+                  <span class="pull-right">
+                    ₹0.00
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="gst-total">
+              <div class="row">
+                <div class="col-md-8">
+                  <span>TDS (%)</span>
+                </div>
+                <div class="col-md-4">
+                  <select class="form-control text-right" name="tdsPerc">
+                    <option value="0">
+                      0</option>
+                    <option value="1">
+                      1</option>
+                    <option value="2">
+                      2</option>
+                    <option value="10">
+                      10</option>
+                    <option value="30">
+                      30</option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="adjustment">
+              <div class="row">
+                <div class="col-md-8">
+                  <span>TDS</span>
+                </div>
+                <div class="col-md-4">
+                  <span class="pull-right">
+                    ₹0.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="amt-due">
+            <div class="row">
+              <div class="col-md-6">
+                <span>Amount Due</span>
+              </div>
+              <div class="col-md-6">
+                <span class="pull-right">
+                  <strong>₹0.00</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-btn">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="cancel">
+          <a class="bttn bttn-default" href="/invoices">Cancel</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="pull-right">
+          <li>
+            <input class="bttn bttn-theme" type="submit" value="Save Invoice">
+          </li>
+          <!-- <li>
+            <input class="bttn bttn-theme" type="submit" value="Preview &amp; Send">
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

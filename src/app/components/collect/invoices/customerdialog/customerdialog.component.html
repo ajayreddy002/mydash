@@ -1,7 +1,7 @@
 <div class="custom_dialog">
-  <div class="icon_block">
+  <!-- <div class="icon_block">
     <i class="fas fa-times"></i>
-  </div>
+  </div> -->
   <div class="dialog_header">
     <h2>Add Customer</h2>
   </div>
@@ -10,12 +10,12 @@
       <div class="col-md-12 col-sm-12">
         <div class="form-group">
           <label for="">Customer Name <span style="color: red;">*</span></label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [(ngModel)]="customerName">
         </div>
       </div>
       <div class="col-md-12 col-sm-12">
         <div class="form-group">
-          <label for="">Customer Name (optional)</label>
+          <label for="">Primary Contact Name (optional)</label>
           <input type="text" class="form-control">
         </div>
       </div>
@@ -73,24 +73,57 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="">State <span style="color: red;">*</span></label>
-            <input type="text" class="form-control">
+            <!-- <input type="text" class="form-control"> -->
+            <p-dropdown  [options]="states" [(ngModel)]="selectedState" placeholder="Select a City"
+              optionLabel="name" [showClear]="true"></p-dropdown>
           </div>
         </div>
         <div class="col-md-12 col-sm-12">
           <div class="form-group">
-            <label for="">
-              <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
-              Shipping and Billing Address are the same
+            <label for="check">
+              <p-checkbox id="check" name="groupname" label="Shipping and Billing Address are the same" value="val1"
+                [(ngModel)]="selectedValues" (onChange)="onChange($event)"></p-checkbox>
+              <!-- Shipping and Billing Address are the same -->
             </label>
           </div>
         </div>
       </div>
     </div>
-    <div class="btn_block">
-        <div class="btns">
-            <button type="button" class="inv_btn">Add Customer</button>
-            <button type="button" class="cancel_btn" (click)="closeDialog()">Cancel</button>
+    <div class="billing" *ngIf="isBillShipSame">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="form-group">
+            <label for="">Shipping Address <span style="color: red;">*</span></label>
+            <input type="text" class="form-control">
+          </div>
         </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">City <span style="color: red;">*</span></label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Pin Code <span style="color: red;">*</span></label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">State <span style="color: red;">*</span></label>
+            <input type="text" class="form-control">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="Select a City"
+              optionLabel="name" [showClear]="true"></p-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn_block">
+      <div class="btns">
+        <button type="button" class="inv_btn">Add Customer</button>
+        <button type="button" class="cancel_btn" (click)="closeDialog()">Cancel</button>
+      </div>
     </div>
   </div>
 </div>
