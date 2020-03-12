@@ -35,7 +35,7 @@ import {NgApexchartsModule} from 'ng-apexcharts';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
-
+import {PaginatorModule} from 'primeng/paginator';
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -67,7 +67,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginatorModule,
   ],
   exports: [
     SidenavComponent,
@@ -102,7 +103,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginatorModule
   ]
 })
 export class SharedModule { }

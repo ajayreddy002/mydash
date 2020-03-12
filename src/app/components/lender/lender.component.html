@@ -1,0 +1,124 @@
+<div class="lender_block">
+  <div class="len_header">
+    <h1>Good Evening, Pavan!</h1>
+    <p>Last Updated : 05/02/20</p>
+  </div>
+  <div class="len_card_block">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card_content">
+            <h5>Revenue</h5>
+            <p>54</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card_content">
+            <h5>NET INCOME</h5>
+            <p>37</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card_content">
+            <h5>PERSONAL CIBIL SCORE</h5>
+            <p>20</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card_content">
+            <h5>YEARS OF OPERATION</h5>
+            <p>35</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="len_input_block">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search...">
+          <div class="search-icon">
+            <img src="../../../assets/images/search_icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="len_filter">
+          <div class="dropdown">
+            <label for="">filterby:</label>
+            <button class="btn btn-secondary dropdown-toggle btn-sm mt-2" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <!-- <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a> -->
+            </div>
+          </div>
+          <div class="fiter_count">
+            <p>2 Filters Selected</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="len_export">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group1">
+                <button>
+                  <img src="../../../assets/images/grid.svg" alt="">
+                  Columns</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group1">
+                <button>
+                  <img src="../../../assets/images/export.svg" alt="">
+                  Export</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="len_table_block">
+    <div>
+      <p-table [columns]="lenderCols" [value]="lenderData" [(selection)]="selectedLender"
+        dataKey="id">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th style="width: 3em">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th *ngFor="let col of columns">
+              {{col.header}}
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td>
+              <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+            </td>
+            <td routerLink="./len-details" *ngFor="let col of columns" [ngClass]="{'green': col.field === 'revenue'
+             || col.field === 'netIncome', 'blue': col.field === 'personalCibilScore'}">
+              {{rowData[col.field]}}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="len_paginator">
+        <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+    </div>
+  </div>
+</div>

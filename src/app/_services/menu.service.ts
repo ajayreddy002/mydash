@@ -52,6 +52,10 @@ export class MenuServiceService {
                 group: { code: 'contact', name: 'Contact' },
                 menus: []
             },
+            {
+                group: { code: 'lender', name: 'Lender' },
+                menus: []
+            },
         ];
         return menuList;
     }

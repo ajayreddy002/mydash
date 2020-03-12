@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedComponent } from './components/shared/shared.component';
 import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
 import {NgApexchartsModule} from 'ng-apexcharts';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import {NgApexchartsModule} from 'ng-apexcharts';
     AppRoutingModule,
     BrowserAnimationsModule,
     DateRangePickerModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    NgCircleProgressModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
