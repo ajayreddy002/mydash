@@ -56,6 +56,10 @@ export class MenuServiceService {
                 group: { code: 'lender', name: 'Lender' },
                 menus: []
             },
+            {
+                group: { code: 'sales', name: 'Sales Dashboard' },
+                menus: []
+            },
         ];
         return menuList;
     }

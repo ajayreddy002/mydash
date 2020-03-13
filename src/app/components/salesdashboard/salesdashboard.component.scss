@@ -1,0 +1,251 @@
+.lender_block {
+  padding: 20px 15px;
+
+  .len_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+
+    h1 {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      margin: 0;
+      padding: 0;
+      color: #4F4F4F;
+    }
+
+    p {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 14px;
+      color: #828282;
+      margin: 0;
+    }
+  }
+
+  .sales_card {
+    .card {
+      background: #243C9B;
+      border-radius: 4px;
+      min-height: 80px;
+      padding: 10px 25px;
+
+      h3 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 14px;
+        color: #E0E0E0;
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+      }
+
+      h2 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+        padding-top: 8px;
+
+        span {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 14px;
+          color: #E0E0E0;
+        }
+      }
+    }
+
+    .sales_card_white {
+      background-color: #FFFFFF;
+      box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.03);
+      border-radius: 4px;
+      min-height: 110px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-top: 12px;
+
+      .img_block {
+        width: 30px;
+        height: 30px;
+        background: #243C9B;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .white_content {
+        h2 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 23px;
+          color: #4F4F4F;
+          display: flex;
+          margin: 0;
+          margin-left: -3px;
+        }
+
+        p {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          margin-top: 8px;
+          color: #243C9B;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .sales_bar_chart {
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 25px;
+
+    .chart_block {
+      padding: 20px;
+
+      h2 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 14px;
+        color: #828282;
+      }
+    }
+  }
+
+  .sales_area_chart {
+    width: 100%;
+    margin-bottom: 25px;
+
+    .area_chart_block {
+      background: #FFFFFF;
+      box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.03);
+      border-radius: 4px;
+      min-height: 350px;
+
+      .area_header {
+        padding: 20px;
+
+        h2 {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 14px;
+          color: #828282;
+        }
+      }
+
+      .area_chart {
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .sales_cust_block {
+    padding: 15px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 4px;
+    min-height: 340px;
+
+    .top_cust_block {
+      border-right: 0.4px solid #BDBDBD;
+
+      .cust_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+
+        h2 {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 14px;
+          color: #828282;
+          margin: 0;
+          padding: 0;
+        }
+
+        mat-icon {
+          cursor: pointer;
+          color: #828282;
+          margin-right: 8px;
+        }
+      }
+
+      .cust_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        padding-bottom: 10px;
+
+        .txt_block {
+          h3 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+          }
+
+          p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 8px;
+            color: #828282;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .amt_block {
+          h4 {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            color: #37817C;
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom {
+  margin: 0 -5px;
+}

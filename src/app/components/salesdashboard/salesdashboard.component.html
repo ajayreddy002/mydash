@@ -1,0 +1,256 @@
+<div class="lender_block">
+  <div class="len_header">
+    <h1>Good Evening, Pavan!</h1>
+    <p>Last Updated : 05/02/20</p>
+  </div>
+  <div class="sales_card">
+    <div class="row mb-2">
+      <div class="col-md-3 p-2">
+        <div class="card">
+          <div class="card_content">
+            <h3>CURRENT MONTHLY SALES</h3>
+            <h2>₹ 1,50,000</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 p-2">
+        <div class="card">
+          <div class="card_content">
+            <h3>YTD SALES</h3>
+            <h2>₹ 23,70,000</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 p-2">
+        <div class="card">
+          <div class="card_content">
+            <h3>YTD SALES GROWTH</h3>
+            <h2>20%</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 p-2">
+        <div class="card">
+          <div class="card_content">
+            <h3>AVERAGE DAYS SALE OUTSTANDING</h3>
+            <h2>35 <span>Days</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add customer, product, inv block -->
+    <div class="row custom p-0 mb-4">
+      <div class="sales_card_white">
+        <div class="col-md-3 pl-4 pr-3">
+          <div class="row">
+            <div class="col-md-3">
+              <span class="img_block"><img src="../../../assets/images/inv-list.svg" alt=""></span>
+            </div>
+            <div class="col-md-9 p-0">
+              <div class="white_content">
+                <h2>
+                  <!-- <span class="img_block"><img src="../../../assets/images/inv-list.svg" alt=""></span> -->
+                  Invoice List
+                </h2>
+                <p>+ New Invoice</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 pl-4 pr-3">
+          <div class="row">
+            <div class="col-md-3">
+              <span class="img_block"><img src="../../../assets/images/add-customer.svg" alt=""></span>
+            </div>
+            <div class="col-md-9 p-0">
+              <div class="white_content">
+                <h2>
+                  Customers List
+                </h2>
+                <p>+ Add Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 pl-4 pr-3">
+          <div class="row">
+            <div class="col-md-3">
+              <span class="img_block"><img src="../../../assets/images/add-product.svg" alt=""></span>
+            </div>
+            <div class="col-md-9 p-0">
+              <div class="white_content">
+                <h2>
+                  Product List
+                </h2>
+                <p>+ Add Product</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 pl-4 pr-3">
+          <div class="row" style="margin-top: -20px;">
+            <div class="col-md-3">
+              <span class="img_block"><img src="../../../assets/images/reports.svg" alt=""></span>
+            </div>
+            <div class="col-md-9 p-0">
+              <div class="white_content">
+                <h2>
+                  Reports
+                </h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sales charts block -->
+  <div class="sales_bar_chart">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart_block">
+          <h2>Sales Trend</h2>
+          <div style="display: block; height: 250px;">
+            <canvas #salesBarChart></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sales_area_chart">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="area_chart_block">
+          <div class="area_header">
+            <h2>VOLUME TREND</h2>
+          </div>
+          <div class="area_chart">
+            <canvas #salesAreaChart></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 p-0">
+        <div class="area_chart_block">
+          <div class="area_header">
+            <h2>PRICING TREND</h2>
+          </div>
+          <div class="area_chart">
+            <canvas #salesPriceChart></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sales_cust_block">
+    <div class="row">
+        <div class="col-md-6 p-0">
+            <div class="top_cust_block">
+                <div class="cust_header">
+                    <h2>TOP CUSTOMERS</h2>
+                    <span><mat-icon>more_vert</mat-icon></span>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Arlene Robertson</h3>
+                        <p>whitegoose497</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Arlene Fox</h3>
+                        <p>angryswan732</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Eleanor Nguyen</h3>
+                        <p>yellowsnake313</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Kristin Flores</h3>
+                        <p>crazyfish228</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Bernard Cooper</h3>
+                        <p>purpleleopard757</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0">
+            <div class="top_cust_block">
+                <div class="cust_header">
+                    <h2>CUSTOMERS WHO ARE PAYING LATE</h2>
+                    <span><mat-icon>more_vert</mat-icon></span>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Arlene Robertson</h3>
+                        <p>whitegoose497</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Arlene Fox</h3>
+                        <p>angryswan732</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Eleanor Nguyen</h3>
+                        <p>yellowsnake313</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Kristin Flores</h3>
+                        <p>crazyfish228</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+                <div class="cust_content">
+                    <div class="txt_block">
+                        <h3>Bernard Cooper</h3>
+                        <p>purpleleopard757</p>
+                    </div>
+                    <div class="amt_block">
+                        <h4>₹23,471.93</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

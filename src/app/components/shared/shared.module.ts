@@ -36,6 +36,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
 import {PaginatorModule} from 'primeng/paginator';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -69,6 +70,7 @@ import {PaginatorModule} from 'primeng/paginator';
     ReactiveFormsModule,
     HttpClientModule,
     PaginatorModule,
+    ChartsModule
   ],
   exports: [
     SidenavComponent,
@@ -104,7 +106,8 @@ import {PaginatorModule} from 'primeng/paginator';
     MatInputModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PaginatorModule
+    PaginatorModule,
+    ChartsModule
   ]
 })
 export class SharedModule { }

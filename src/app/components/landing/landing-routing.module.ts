@@ -15,6 +15,7 @@ const routes: Routes = [
       {path: 'contact', component: ContactComponent},
       {path: 'addcontact', component: AddcontactComponent},
       {path: 'lender', loadChildren: () => import('../lender/lender.module').then(mod => mod.LenderModule)},
+      {path: 'sales', loadChildren: () => import('../salesdashboard/salesdashboard.module').then(mod => mod.SalesdashboardModule)},
     ]
   },
 ];
