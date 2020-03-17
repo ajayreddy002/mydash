@@ -37,6 +37,8 @@ import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
 import {PaginatorModule} from 'primeng/paginator';
 import { ChartsModule } from 'ng2-charts';
+
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [SidenavComponent, ContactComponent, AddcontactComponent],
   imports: [
@@ -70,7 +72,8 @@ import { ChartsModule } from 'ng2-charts';
     ReactiveFormsModule,
     HttpClientModule,
     PaginatorModule,
-    ChartsModule
+    ChartsModule,
+    NgCircleProgressModule
   ],
   exports: [
     SidenavComponent,
@@ -107,7 +110,8 @@ import { ChartsModule } from 'ng2-charts';
     ReactiveFormsModule,
     HttpClientModule,
     PaginatorModule,
-    ChartsModule
+    ChartsModule,
+    NgCircleProgressModule
   ]
 })
 export class SharedModule { }

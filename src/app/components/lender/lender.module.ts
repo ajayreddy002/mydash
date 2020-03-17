@@ -30,7 +30,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     //   clockwise: false,
     //   startFromZero: false
     // })
-    NgCircleProgressModule
   ]
 })
 export class LenderModule { }
